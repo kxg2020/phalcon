@@ -8,6 +8,7 @@ use Phalcon\Mvc\View;
 use Phalcon\Mvc\View\Engine\Php as PhpEngine;
 use Phalcon\Mvc\ModuleDefinitionInterface;
 use Phalcon\Config;
+use Phalcon\Mvc\View\Engine\Volt as VoltEngine;
 
 
 class Module implements ModuleDefinitionInterface
@@ -57,14 +58,23 @@ class Module implements ModuleDefinitionInterface
          */
         $di['view'] = function () {
             $config = $this->getConfig();
-
             $view = new View();
             $view->setViewsDir($config->get('application')->viewsDir);
-            
-            $view->registerEngines([
-                '.phtml' => PhpEngine::class
-            ]);
-
+            $view->registerEngines(
+                [
+                    ".phtml" => function($view,$di){
+                        $volt = new VoltEngine($view,$di);
+                        $volt->setOptions(
+                            [
+                                'compiledPath' => '../cache/',
+                                'compiledSeparator' => '_'
+                                // this directory EXISTS
+                            ]
+                        );
+                        return $volt;
+                    }
+                ]
+            );
             return $view;
         };
 

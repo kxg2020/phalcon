@@ -67,7 +67,8 @@ class Module implements ModuleDefinitionInterface
                         $volt = new VoltEngine($view,$di);
                         $volt->setOptions(
                             [
-                                "compiledPath"      => "_",
+                                'compiledPath' => '../cache/',
+                                'compiledSeparator' => '_'
                                 // this directory EXISTS
                             ]
                         );
