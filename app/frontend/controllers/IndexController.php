@@ -1,0 +1,13 @@
+<?php
+namespace Multiple\Frontend\Controllers;
+
+use Phalcon\Mvc\Controller;
+
+class IndexController extends Controller{
+    /**
+     * Õ¹Ê¾Ê×Ò³
+     */
+    public function indexAction(){
+        echo "This is Home";
+    }
+}
