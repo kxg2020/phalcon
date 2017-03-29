@@ -1,4 +1,4 @@
-a:5:{i:0;s:4263:"<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
   <title>旋猫猫之家</title>
@@ -74,13 +74,115 @@ a:5:{i:0;s:4263:"<!DOCTYPE html>
           <h2 class="page-title">Dashboard <small>Statistics and more</small></h2>
         </div>
       </div>
-";s:4:"main";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:2:"
 
-";s:4:"file";s:71:"D:\phpStudy\WWW\phalcon\app\backend\config/../views/layout/header.phtml";s:4:"line";i:79;}}i:1;s:59:"
+<div class="col-lg-12">
+    <div class="widget">
+        <div class="widget-header"> <i class="icon-table"></i>
+            <h3>Table</h3>
+        </div>
+        <div class="widget-content">
+            <div class="body">
+                <table class="table table-striped table-images">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Image</th>
+                        <th>Info</th>
+                        <th>Info</th>
+                        <th class="hidden-xs">Date</th>
+                        <th class="hidden-xs">Size</th>
+                        <th class="hidden-xs"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td><img src="images/1.jpg"></td>
+                        <td> abc </td>
+                        <td class="hidden-xs"><p> <small> <strong>Dimensions:</strong> &nbsp; 200x150 </small> </p></td>
+                        <td class="hidden-xs"> August 18, 2013 </td>
+                        <td> 45.6 KB </td>
+                        <td class="hidden-xs"><button class="btn btn-sm btn-primary"> Edit </button>
+                            <button data-toggle="button" class="btn btn-sm btn-warning"> Delete </button></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td><img src="images/1.jpg"></td>
+
+                        <td> abc</td>
+                        <td class="hidden-xs"><p> <small> <strong>Dimensions:</strong> &nbsp; 200x150 </small> </p></td>
+                        <td class="hidden-xs"> August 18, 2013 </td>
+                        <td> 15.3 MB </td>
+                        <td class="hidden-xs"><button class="btn btn-sm btn-primary"> Edit </button>
+                            <button data-toggle="button" class="btn btn-sm btn-warning"> Delete </button></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td><img src="images/1.jpg"></td>
+
+                        <td> abc </td>
+                        <td class="hidden-xs"><p> <small> <strong>Dimensions:</strong> &nbsp; 200x150 </small> </p></td>
+                        <td class="hidden-xs"> September 18, 2013 </td>
+                        <td> 49.0 KB </td>
+                        <td class="hidden-xs"><button class="btn btn-sm btn-primary"> Edit </button>
+                            <button data-toggle="button" class="btn btn-sm btn-warning"> Delete </button></td>
+                    </tr>
+                    <tr>
+                        <td class="hidden-xs-portrait">4</td>
+                        <td><img src="images/1.jpg"></td>
+
+                        <td> abc </td>
+                        <td class="hidden-xs"><p> <small> <strong>Dimensions:</strong> &nbsp; 200x150 </small> </p></td>
+                        <td class="hidden-xs"> September 18, 2013 </td>
+                        <td> 69.1 KB </td>
+                        <td class="hidden-xs"><button class="btn btn-sm btn-primary"> Edit </button>
+                            <button data-toggle="button" class="btn btn-sm btn-warning"> Delete </button></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td><img src="images/1.jpg"></td>
+
+                        <td> abc </td>
+                        <td class="hidden-xs"><p> <small> <strong>Dimensions:</strong> &nbsp; 200x150 </small> </p></td>
+                        <td class="hidden-xs"> October 3, 2013 </td>
+                        <td> 2.3 MB </td>
+                        <td class="hidden-xs"><button class="btn btn-sm btn-primary"> Edit </button>
+                            <button data-toggle="button" class="btn btn-sm btn-warning"> Delete </button></td>
+                    </tr>
+
+                    </tbody>
+                </table>
+                <div class="clearfix">
+                    <div class="pull-right">
+                        <div class="btn-group">
+                            <button data-toggle="dropdown" class="btn btn-sm btn-inverse dropdown-toggle"> &nbsp; Clear &nbsp; <i class="icon-caret-down"></i> </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Clear</a></li>
+                                <li><a href="#">Move ...</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-default btn-sm"> Send to ... </button>
+                    </div>
+                    <ul class="pagination no-margin">
+                        <li class="disabled"><a href="#">Prev</a></li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">Next</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
     </div>
   </div>
 </div>
-<div class="bottom-nav footer">";s:6:"footer";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:42:" 2013 &copy; Thin Admin by Riaxe Systems. ";s:4:"file";s:71:"D:\phpStudy\WWW\phalcon\app\backend\config/../views/layout/header.phtml";s:4:"line";i:83;}}i:2;s:3317:"</div>
+<div class="bottom-nav footer"> 2013 &copy; Thin Admin by Riaxe Systems. </div>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="/public/js/jquery.js"></script>
@@ -123,4 +225,3 @@ a:5:{i:0;s:4263:"<!DOCTYPE html>
 
 </body>
 </html>
-";}

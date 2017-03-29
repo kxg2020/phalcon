@@ -15,7 +15,6 @@
   <script src="/public/assets/js/html5shiv.js"></script>
   <script src="/public/assets/js/respond.min.js"></script>
   <![endif]-->
-
 </head>
 <body>
 <div class="container">
@@ -41,18 +40,17 @@
   <div class="left-nav">
     <div id="side-nav">
       <ul id="nav">
-        <li class="current"> <a href="index.html"> <i class="icon-dashboard"></i> Dashboard </a> </li>
-        <li> <a href="#"> <i class="icon-table"></i> Tables <span class="label label-info pull-right">2</span> <i class="arrow icon-angle-left"></i></a>
+        <li class="current"> <a href="index.html"> <i class="icon-dashboard"></i> 我的首页 </a> </li>
+        <li> <a href="#"> <i class="icon-table"></i> 图片管理 <span class="label label-info pull-right"></span> <i class="arrow icon-angle-left"></i></a>
           <ul class="sub-menu">
-            <li> <a href="static_table.html"> <i class="icon-angle-right"></i> Static </a> </li>
-            <li> <a href="dynamic_table.html"> <i class="icon-angle-right"></i> Dynamic </a> </li>
+            <li> <a href="<?= $this->url->get('backend/image/index') ?>"> <i class="icon-angle-right"></i> 图片列表 </a> </li>
+            <li> <a href="<?= $this->url->get('backend/image/add') ?>"> <i class="icon-angle-right"></i> 图片添加 </a> </li>
           </ul>
         </li>
-        <li> <a href="chart.html"> <i class="icon-bar-chart"></i> Charts &amp; Statistics </a> </li>
-        <li> <a href="#"> <i class="icon-flag"></i> Fontawesome <span class="label label-info pull-right">2</span> <i class="arrow icon-angle-left"></i></a>
+        <li> <a href="#"> <i class="icon-flag"></i> 文章管理 <span class="label label-info pull-right"></span> <i class="arrow icon-angle-left"></i></a>
           <ul class="sub-menu">
-            <li> <a href="icons-new.html"> <i class="icon-angle-right"></i> New-Icons </a> </li>
-            <li> <a href="icons.html"> <i class="icon-angle-right"></i> Icons </a> </li>
+            <li> <a href="icons-new.html"> <i class="icon-angle-right"></i> 文章列表 </a> </li>
+            <li> <a href="icons.html"> <i class="icon-angle-right"></i> 文章添加 </a> </li>
           </ul>
         </li>
         <li> <a href="gallery.html"> <i class="icon-picture"></i> Gallery </a> </li>
@@ -77,6 +75,26 @@
         </div>
       </div>
 
+<div class="row">
+    <div class="col-lg-12">
+        <div class="widget">
+            <div class="widget-header"> <i class="icon-external-link"></i>
+                <h3> Dropzone File Upload</h3>
+            </div>
+            <div class="widget-content">
+
+                <div class="panel-body">
+                    <div class="alert alert-warning">
+                        Please note that demo server is not configured to save uploaded files, therefore you may get an error message.
+                    </div>
+                    <form id="my-awesome-dropzone" class="dropzone dz-clickable" action="/file-upload"><div class="dz-default dz-message"><span>Drop files here to upload</span></div></form>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
 
     </div>
   </div>

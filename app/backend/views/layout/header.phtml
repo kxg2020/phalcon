@@ -15,7 +15,6 @@
   <script src="/public/assets/js/html5shiv.js"></script>
   <script src="/public/assets/js/respond.min.js"></script>
   <![endif]-->
-
 </head>
 <body>
 <div class="container">
@@ -41,18 +40,17 @@
   <div class="left-nav">
     <div id="side-nav">
       <ul id="nav">
-        <li class="current"> <a href="index.html"> <i class="icon-dashboard"></i> Dashboard </a> </li>
-        <li> <a href="#"> <i class="icon-table"></i> Tables <span class="label label-info pull-right">2</span> <i class="arrow icon-angle-left"></i></a>
+        <li class="current"> <a href="index.html"> <i class="icon-dashboard"></i> 我的首页 </a> </li>
+        <li> <a href="#"> <i class="icon-table"></i> 图片管理 <span class="label label-info pull-right"></span> <i class="arrow icon-angle-left"></i></a>
           <ul class="sub-menu">
-            <li> <a href="static_table.html"> <i class="icon-angle-right"></i> Static </a> </li>
-            <li> <a href="dynamic_table.html"> <i class="icon-angle-right"></i> Dynamic </a> </li>
+            <li> <a href="{{url('backend/image/index')}}"> <i class="icon-angle-right"></i> 图片列表 </a> </li>
+            <li> <a href="{{url('backend/image/add')}}"> <i class="icon-angle-right"></i> 图片添加 </a> </li>
           </ul>
         </li>
-        <li> <a href="chart.html"> <i class="icon-bar-chart"></i> Charts &amp; Statistics </a> </li>
-        <li> <a href="#"> <i class="icon-flag"></i> Fontawesome <span class="label label-info pull-right">2</span> <i class="arrow icon-angle-left"></i></a>
+        <li> <a href="#"> <i class="icon-flag"></i> 文章管理 <span class="label label-info pull-right"></span> <i class="arrow icon-angle-left"></i></a>
           <ul class="sub-menu">
-            <li> <a href="icons-new.html"> <i class="icon-angle-right"></i> New-Icons </a> </li>
-            <li> <a href="icons.html"> <i class="icon-angle-right"></i> Icons </a> </li>
+            <li> <a href="icons-new.html"> <i class="icon-angle-right"></i> 文章列表 </a> </li>
+            <li> <a href="icons.html"> <i class="icon-angle-right"></i> 文章添加 </a> </li>
           </ul>
         </li>
         <li> <a href="gallery.html"> <i class="icon-picture"></i> Gallery </a> </li>
@@ -76,12 +74,13 @@
           <h2 class="page-title">Dashboard <small>Statistics and more</small></h2>
         </div>
       </div>
+{%  block main %}
 
-
+{%  endblock %}
     </div>
   </div>
 </div>
-<div class="bottom-nav footer"> 2013 &copy; Thin Admin by Riaxe Systems. </div>
+<div class="bottom-nav footer">{% block footer%} 2013 &copy; Thin Admin by Riaxe Systems. {% endblock %}</div>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="/public/js/jquery.js"></script>
