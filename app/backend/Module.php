@@ -67,7 +67,8 @@ class Module implements ModuleDefinitionInterface
                         $volt = new VoltEngine($view,$di);
                         $volt->setOptions(
                             [
-                                'compiledPath' => '../cache/',
+                                //>> 这个缓存路径是相对于index.php来说的
+                                'compiledPath' => '../app/cache/',
                                 'compiledSeparator' => '_'
                                 // this directory EXISTS
                             ]
