@@ -11,8 +11,8 @@ return new \Phalcon\Config([
         'adapter'     => 'Mysql',
         'host'        => 'localhost',
         'username'    => 'root',
-        'password'    => '',
-        'dbname'      => 'test',
+        'password'    => 'root',
+        'dbname'      => 'xm_db',
         'charset'     => 'utf8',
     ],
     'application' => [
@@ -23,6 +23,7 @@ return new \Phalcon\Config([
         'viewsDir'       => APP_PATH . '/views/',
         'pluginsDir'     => APP_PATH . '/plugins/',
         'libraryDir'     => APP_PATH . '/library/',
+        'cacheDir'       => BASE_PATH . '/cache/',
 
         // This allows the baseUri to be understand project paths that are not in the root directory
         // of the webpspace.  This will break if the public/index.php entry point is moved or

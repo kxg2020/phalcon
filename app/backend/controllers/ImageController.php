@@ -18,6 +18,8 @@ class ImageController extends Controller{
      */
     public function addAction(){
 
+        $res = $this->mysql->getList(['id'=>1],'*','','','','xm_banner');
+        var_dump($res);exit;
         $this->view->pick('image/add');
     }
 }

@@ -3,10 +3,6 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/app/backend/Module.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/backend/views/image/add.phtml" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/backend/views/image/index.phtml" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/backend/views/index/index.phtml" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/backend/views/index/login.phtml" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/backend/views/layout/header.phtml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/config/services.php" charset="UTF-8" />
   </component>
 </project>

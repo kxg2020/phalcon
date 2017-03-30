@@ -1,4 +1,4 @@
-a:5:{i:0;s:4263:"<!DOCTYPE html>
+a:5:{i:0;s:4339:"<!DOCTYPE html>
 <html>
 <head>
   <title>旋猫猫之家</title>
@@ -74,13 +74,13 @@ a:5:{i:0;s:4263:"<!DOCTYPE html>
           <h2 class="page-title">Dashboard <small>Statistics and more</small></h2>
         </div>
       </div>
-";s:4:"main";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:2:"
+";s:4:"main";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:4:"
 
-";s:4:"file";s:71:"D:\phpStudy\WWW\phalcon\app\backend\config/../views/layout/header.phtml";s:4:"line";i:79;}}i:1;s:59:"
+";s:4:"file";s:71:"D:\phpStudy\WWW\phalcon\app\backend\config/../views/layout/header.phtml";s:4:"line";i:79;}}i:1;s:63:"
     </div>
   </div>
 </div>
-<div class="bottom-nav footer">";s:6:"footer";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:42:" 2013 &copy; Thin Admin by Riaxe Systems. ";s:4:"file";s:71:"D:\phpStudy\WWW\phalcon\app\backend\config/../views/layout/header.phtml";s:4:"line";i:83;}}i:2;s:3317:"</div>
+<div class="bottom-nav footer">";s:6:"footer";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:42:" 2013 &copy; Thin Admin by Riaxe Systems. ";s:4:"file";s:71:"D:\phpStudy\WWW\phalcon\app\backend\config/../views/layout/header.phtml";s:4:"line";i:83;}}i:2;s:3360:"</div>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="/public/js/jquery.js"></script>

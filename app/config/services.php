@@ -107,6 +107,12 @@ $di->set('flash', function () {
 $di->setShared('session', function () {
     $session = new SessionAdapter();
     $session->start();
-
     return $session;
 });
+
+
+//>> ÅäÖÃÊý¾Ý¿â
+$di->set('mysql', function (){
+    $config = $this->getConfig();
+    return MysqlDatabase::getIns('database',$config);
+},true);
