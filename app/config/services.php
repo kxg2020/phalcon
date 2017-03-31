@@ -139,4 +139,20 @@ $di->setShared( "transactions",function () {
     return new TransactionManager();
 });
 
+//>> 错误消息类
+$di->set('errmsg',function(){
+    return new GetErrMsg();
+});
+//>> 注册常用类
+$di->setShared('common', function (){
+    return new Common();
+});
+//>> 注册EXCEL组件 Register a PHPExcel component
+$di->set('phpexcel', function(){
+    return new PHPExcelTreat();
+});
+$di->setShared('aes256',function(){
+    return new AES256();
+});
+
 

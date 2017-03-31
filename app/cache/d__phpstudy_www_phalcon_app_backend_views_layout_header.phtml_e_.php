@@ -1,10 +1,13 @@
-a:5:{i:0;s:4339:"<!DOCTYPE html>
+a:9:{i:0;s:159:"<!DOCTYPE html>
 <html>
 <head>
   <title>旋猫猫之家</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Bootstrap -->
+  ";s:3:"css";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:3:"
+  ";s:4:"file";s:71:"D:\phpStudy\WWW\phalcon\app\backend\config/../views/layout/header.phtml";s:4:"line";i:8;}}i:1;s:4193:"
   <link href="/public/css/bootstrap.css" rel="stylesheet" media="screen">
+  <link href="/public/layer/skin/default/layer.css" rel="stylesheet" media="screen">
   <link href="/public/css/thin-admin.css" rel="stylesheet" media="screen">
   <link href="/public/css/font-awesome.css" rel="stylesheet" media="screen">
   <link href="/public/style/style.css" rel="stylesheet">
@@ -41,7 +44,7 @@ a:5:{i:0;s:4339:"<!DOCTYPE html>
     <div id="side-nav">
       <ul id="nav">
         <li class="current"> <a href="index.html"> <i class="icon-dashboard"></i> 我的首页 </a> </li>
-        <li> <a href="#"> <i class="icon-table"></i> 图片管理 <span class="label label-info pull-right"></span> <i class="arrow icon-angle-left"></i></a>
+        <li> <a href="#"> <i class="icon-table" ></i> 图片管理 <span class="label label-info pull-right"></span> <i class="arrow icon-angle-left"></i></a>
           <ul class="sub-menu">
             <li> <a href="<?= $this->url->get('backend/image/index') ?>"> <i class="icon-angle-right"></i> 图片列表 </a> </li>
             <li> <a href="<?= $this->url->get('backend/image/add') ?>"> <i class="icon-angle-right"></i> 图片添加 </a> </li>
@@ -74,13 +77,14 @@ a:5:{i:0;s:4339:"<!DOCTYPE html>
           <h2 class="page-title">Dashboard <small>Statistics and more</small></h2>
         </div>
       </div>
-";s:4:"main";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:4:"
+";s:4:"main";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:2:"
 
-";s:4:"file";s:71:"D:\phpStudy\WWW\phalcon\app\backend\config/../views/layout/header.phtml";s:4:"line";i:79;}}i:1;s:63:"
+";s:4:"file";s:71:"D:\phpStudy\WWW\phalcon\app\backend\config/../views/layout/header.phtml";s:4:"line";i:82;}}i:2;s:59:"
     </div>
   </div>
 </div>
-<div class="bottom-nav footer">";s:6:"footer";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:42:" 2013 &copy; Thin Admin by Riaxe Systems. ";s:4:"file";s:71:"D:\phpStudy\WWW\phalcon\app\backend\config/../views/layout/header.phtml";s:4:"line";i:83;}}i:2;s:3360:"</div>
+<div class="bottom-nav footer">";s:6:"footer";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:42:" 2013 &copy; Thin Admin by Riaxe Systems. ";s:4:"file";s:71:"D:\phpStudy\WWW\phalcon\app\backend\config/../views/layout/header.phtml";s:4:"line";i:86;}}i:3;s:860:"</div>
+
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="/public/js/jquery.js"></script>
@@ -94,7 +98,9 @@ a:5:{i:0;s:4339:"<!DOCTYPE html>
 <script src="/public/assets/sparkline/easy-pie-chart.js"></script>
 <script src="/public/js/select-checkbox.js"></script>
 <script src="/public/js/to-do-admin.js"></script>
+";s:2:"js";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:2:"
 
+";s:4:"file";s:71:"D:\phpStudy\WWW\phalcon\app\backend\config/../views/layout/header.phtml";s:4:"line";i:103;}}i:4;s:2455:"
 <!--switcher html start-->
 <div class="demo_changer active" style="right: 0px;">
   <div class="demo-icon"></div>
@@ -102,10 +108,10 @@ a:5:{i:0;s:4339:"<!DOCTYPE html>
     <div class="predefined_styles"> <a class="styleswitch" rel="a" href=""><img alt="" src="/public/images/a.jpg"></a> <a class="styleswitch" rel="b" href=""><img alt="" src="/public/images/b.jpg"></a> <a class="styleswitch" rel="c" href=""><img alt="" src="/public/images/c.jpg"></a> <a class="styleswitch" rel="d" href=""><img alt="" src="/public/images/d.jpg"></a> <a class="styleswitch" rel="e" href=""><img alt="" src="/public/images/e.jpg"></a> <a class="styleswitch" rel="f" href=""><img alt="" src="/public/images/f.jpg"></a> <a class="styleswitch" rel="g" href=""><img alt="" src="/public/images/g.jpg"></a> <a class="styleswitch" rel="h" href=""><img alt="" src="/public/images/h.jpg"></a> <a class="styleswitch" rel="i" href=""><img alt="" src="/public/images/i.jpg"></a> <a class="styleswitch" rel="j" href=""><img alt="" src="/public/images/j.jpg"></a> </div>
   </div>
 </div>
-
 <!--switcher html end-->
 <script src="/public/assets/switcher/switcher.js"></script>
 <script src="/public/assets/switcher/moderziner.custom.js"></script>
+
 <link href="/public/assets/switcher/switcher.css" rel="stylesheet">
 <link href="/public/assets/switcher/switcher-defult.css" rel="stylesheet">
 <link rel="alternate stylesheet" type="text/css" href="/public/assets/switcher/a.css" title="a" media="all" />
@@ -118,9 +124,6 @@ a:5:{i:0;s:4339:"<!DOCTYPE html>
 <link rel="alternate stylesheet" type="text/css" href="/public/assets/switcher/h.css" title="h" media="all" />
 <link rel="alternate stylesheet" type="text/css" href="/public/assets/switcher/i.css" title="i" media="all" />
 <link rel="alternate stylesheet" type="text/css" href="/public/assets/switcher/j.css" title="j" media="all" />
-
-
-
 </body>
 </html>
 ";}
