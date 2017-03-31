@@ -6,7 +6,7 @@ use Phalcon\Mvc\Controller;
 class ImageController extends Controller{
 
     /**
-     * չʾҳ��
+     * 展示页面
      */
     public function indexAction(){
 
@@ -14,12 +14,12 @@ class ImageController extends Controller{
     }
 
     /**
-     * ����ͼƬ
+     * 添加图片
      */
     public function addAction(){
 
-        $res = $this->mysql->getList(['id'=>1],'*','','','','xm_banner');
-        var_dump($res);exit;
+        $cl = $this->upload;
+        var_dump($cl);exit;
         $this->view->pick('image/add');
     }
 }

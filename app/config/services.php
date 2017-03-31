@@ -7,7 +7,7 @@ use Phalcon\Mvc\View\Engine\Volt as VoltEngine;
 use Phalcon\Mvc\Model\Metadata\Memory as MetaDataAdapter;
 use Phalcon\Session\Adapter\Files as SessionAdapter;
 use Phalcon\Flash\Direct as Flash;
-
+use Phalcon\Mvc\Model\Transaction\Manager as TransactionManager;
 /**
  * Shared configuration service
  */
@@ -111,8 +111,32 @@ $di->setShared('session', function () {
 });
 
 
-//>> �������ݿ�
+//>> �������ݿ�
 $di->set('mysql', function (){
     $config = $this->getConfig();
     return MysqlDatabase::getIns('database',$config);
 },true);
+
+$di->set('upload', function (){
+    $_config = [
+    'maxSize'       =>  1024*1024*5, //上传的文件大小限制 (0-不做限制)
+    'exts'          =>  array('jpg', 'png', 'gif', 'jpeg'),
+    'rootPath'      =>  './uploads/', //保存根路径
+    ];
+    $config = [
+    'FILE_UPLOAD_TYPE'    =>    'Qiniu',
+    'secretKey'      => 'x5OoAluQ5x58FpzL3rONPH9rj1jnv0xe8HDwey0R', //七牛密码
+    'accessKey'      => 'XQSWu87QQg5Poej0i1EKhFnh0ao5q47BfhLzxOIV', //七牛用户
+    'domain'         => 'ocavymzvy.bkt.clouddn.com/', //域名
+    'bucket'         => '0418', //空间名称
+    'timeout'        => 300, //超时时间
+    ];
+    return new Uploads($_config,'',$config);
+},true);
+
+//>>事务
+$di->setShared( "transactions",function () {
+    return new TransactionManager();
+});
+
+

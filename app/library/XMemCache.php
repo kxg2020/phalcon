@@ -78,7 +78,7 @@ class XMemCache
             //读取配置文件
             global $G_X;
             if(empty($G_X['memcacheserver'])){
-                return;
+                return false;
             }
             foreach($G_X['memcacheserver'] as $mem){
                 $this->_memobj->addServer($mem['host'], $mem['port']);
