@@ -119,16 +119,12 @@
                                 <!-- The fileinput-button span is used to style the file input field as button --><form method="post" action="<?= $this->url->get('backend/image/upload') ?>">
                                     <span class="btn btn-success fileinput-button" style="position: relative">
                                         <i class="icon-plus"></i>
-                                        <span id="file_upload">点击上传.</span>
-                                        <input style="position: absolute; top: 0;left: 0; opacity: 0;width: 100%;height: 100% " type="file" name="files" multiple="" >
+                                        <span>点击上传.</span>
+                                        <input style="position: absolute; top: 0;left: 0; opacity: 0;width: 100%;height: 100% " type="file" name="files" multiple="" id="file_upload">
                                     </span>
                                 <!-- The loading indicator is shown during file processing -->              </form>
                                 <span class="fileupload-loading" ></span>
                             </div>
-                            <button type="button"  class="btn btn-primary start">
-                                <i class="icon-upload"></i>
-                                <span id="ok">保存</span>
-                            </button>
                         </div>
                         <!-- The global progress information -->
                         <div class="col-lg-5 fileupload-progress fade">
@@ -146,7 +142,7 @@
                     </table>
                 </form>
             </div>
-
+<input type="hidden" value="" id="Qiniu">
         </div>
     </div>
 </div>
@@ -193,15 +189,14 @@
             },
             onUploadSuccess: function (file, data) {
                 data = $.parseJSON(data);
+                console.log(data.url);
                 if (data.status == 0) {
                     layer.alert(data.msg, {time: 1000})
                 } else {
                     var _isMax = false;
-                    var path = data.url;
-                    console.log(data.url);
+                    var _url = data.data;
 
-                    // 获取图片列表
-                    $('#images').html(_html);
+                    console.log($('#Qiniu').val());
                     if (_isMax == false) {
                         layer.msg('上传成功', {time: 1000})
                     }

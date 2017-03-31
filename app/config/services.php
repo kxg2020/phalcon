@@ -124,7 +124,8 @@ $di->set('upload', function (){
     'rootPath'      =>  './uploads/', //保存根路径
     ];
     $config = [
-    'FILE_UPLOAD_TYPE'    =>    'Qiniu',
+
+    'FILE_UPLOAD_TYPE'=>    'Qiniu',
     'secretKey'      => 'x5OoAluQ5x58FpzL3rONPH9rj1jnv0xe8HDwey0R', //七牛密码
     'accessKey'      => 'XQSWu87QQg5Poej0i1EKhFnh0ao5q47BfhLzxOIV', //七牛用户
     'domain'         => 'ocavymzvy.bkt.clouddn.com/', //域名

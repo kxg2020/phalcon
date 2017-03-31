@@ -19,7 +19,6 @@ class ImageController extends Controller{
     public function addAction(){
 
 
-        echo 1;
         $this->view->pick('image/add');
     }
 
@@ -28,12 +27,12 @@ class ImageController extends Controller{
      */
     public function uploadAction(){
 
-        $res = $this->upload->uploadOne($_FILES);
+        $res = $this->upload->uploadOne(array_shift($_FILES));
+
         //>> 判断是否上传成功
-        if($res){
+        if(!empty($res)){
 
-            die($this->common->_printSuccess(['status'=>1,'url'=>$res['url']]));
-
+            return json_encode($res);
         }else{
 
             die($this->common->_printError('10000'));

@@ -40,7 +40,7 @@ class QiniuStorage {
 		}
 
 		public function UploadToken($sk ,$ak ,$param){
-			$param['deadline'] = $param['Expires'] == 0? 3600: $param['Expires'];
+			$param['deadline'] = 3600;
 			$param['deadline'] += time();
 			$data = array('scope'=> $this->bucket, 'deadline'=>$param['deadline']);
 			if (!empty($param['CallbackUrl'])) {
@@ -75,12 +75,8 @@ class QiniuStorage {
 
 			$fields = array(
 				'token'	=>	$uploadToken,
-				'key'	=>	$config['saveName']? : $file['fileName'],
+				'key'	=>	$file['fileName'],
 			);
-
-			if(is_array($config['custom_fields']) && $config['custom_fields'] !== array()){
-				$fields = array_merge($fields, $config['custom_fields']);
-			}
 
 			foreach ($fields as $name => $val) {
 				array_push($data, '--' . $mimeBoundary);
