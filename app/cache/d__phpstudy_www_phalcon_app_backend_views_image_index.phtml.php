@@ -1,11 +1,11 @@
-a:9:{i:0;s:165:"<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
   <title>旋猫猫之家</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Bootstrap -->
-  ";s:3:"css";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:4:"
-  ";s:4:"file";s:71:"D:\phpStudy\WWW\phalcon\app\backend\config/../views/layout/header.phtml";s:4:"line";i:8;}}i:1;s:4265:"
+  
+  
   <link href="/public/css/bootstrap.css" rel="stylesheet" media="screen">
   <link href="/public/layer/skin/default/layer.css" rel="stylesheet" media="screen">
   <link href="/public/css/thin-admin.css" rel="stylesheet" media="screen">
@@ -77,13 +77,115 @@ a:9:{i:0;s:165:"<!DOCTYPE html>
           <h2 class="page-title">Dashboard <small>Statistics and more</small></h2>
         </div>
       </div>
-";s:4:"main";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:4:"
 
-";s:4:"file";s:71:"D:\phpStudy\WWW\phalcon\app\backend\config/../views/layout/header.phtml";s:4:"line";i:82;}}i:2;s:63:"
+<div class="col-lg-12">
+    <div class="widget">
+        <div class="widget-header"> <i class="icon-table"></i>
+            <h3>Table</h3>
+        </div>
+        <div class="widget-content">
+            <div class="body">
+                <table class="table table-striped table-images">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Image</th>
+                        <th>Info</th>
+                        <th>Info</th>
+                        <th class="hidden-xs">Date</th>
+                        <th class="hidden-xs">Size</th>
+                        <th class="hidden-xs"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td><img src="images/1.jpg"></td>
+                        <td> abc </td>
+                        <td class="hidden-xs"><p> <small> <strong>Dimensions:</strong> &nbsp; 200x150 </small> </p></td>
+                        <td class="hidden-xs"> August 18, 2013 </td>
+                        <td> 45.6 KB </td>
+                        <td class="hidden-xs"><button class="btn btn-sm btn-primary"> Edit </button>
+                            <button data-toggle="button" class="btn btn-sm btn-warning"> Delete </button></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td><img src="images/1.jpg"></td>
+
+                        <td> abc</td>
+                        <td class="hidden-xs"><p> <small> <strong>Dimensions:</strong> &nbsp; 200x150 </small> </p></td>
+                        <td class="hidden-xs"> August 18, 2013 </td>
+                        <td> 15.3 MB </td>
+                        <td class="hidden-xs"><button class="btn btn-sm btn-primary"> Edit </button>
+                            <button data-toggle="button" class="btn btn-sm btn-warning"> Delete </button></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td><img src="images/1.jpg"></td>
+
+                        <td> abc </td>
+                        <td class="hidden-xs"><p> <small> <strong>Dimensions:</strong> &nbsp; 200x150 </small> </p></td>
+                        <td class="hidden-xs"> September 18, 2013 </td>
+                        <td> 49.0 KB </td>
+                        <td class="hidden-xs"><button class="btn btn-sm btn-primary"> Edit </button>
+                            <button data-toggle="button" class="btn btn-sm btn-warning"> Delete </button></td>
+                    </tr>
+                    <tr>
+                        <td class="hidden-xs-portrait">4</td>
+                        <td><img src="images/1.jpg"></td>
+
+                        <td> abc </td>
+                        <td class="hidden-xs"><p> <small> <strong>Dimensions:</strong> &nbsp; 200x150 </small> </p></td>
+                        <td class="hidden-xs"> September 18, 2013 </td>
+                        <td> 69.1 KB </td>
+                        <td class="hidden-xs"><button class="btn btn-sm btn-primary"> Edit </button>
+                            <button data-toggle="button" class="btn btn-sm btn-warning"> Delete </button></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td><img src="images/1.jpg"></td>
+
+                        <td> abc </td>
+                        <td class="hidden-xs"><p> <small> <strong>Dimensions:</strong> &nbsp; 200x150 </small> </p></td>
+                        <td class="hidden-xs"> October 3, 2013 </td>
+                        <td> 2.3 MB </td>
+                        <td class="hidden-xs"><button class="btn btn-sm btn-primary"> Edit </button>
+                            <button data-toggle="button" class="btn btn-sm btn-warning"> Delete </button></td>
+                    </tr>
+
+                    </tbody>
+                </table>
+                <div class="clearfix">
+                    <div class="pull-right">
+                        <div class="btn-group">
+                            <button data-toggle="dropdown" class="btn btn-sm btn-inverse dropdown-toggle"> &nbsp; Clear &nbsp; <i class="icon-caret-down"></i> </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Clear</a></li>
+                                <li><a href="#">Move ...</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-default btn-sm"> Send to ... </button>
+                    </div>
+                    <ul class="pagination no-margin">
+                        <li class="disabled"><a href="#">Prev</a></li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">Next</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
     </div>
   </div>
 </div>
-<div class="bottom-nav footer">";s:6:"footer";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:42:" 2013 &copy; Thin Admin by Riaxe Systems. ";s:4:"file";s:71:"D:\phpStudy\WWW\phalcon\app\backend\config/../views/layout/header.phtml";s:4:"line";i:86;}}i:3;s:875:"</div>
+<div class="bottom-nav footer"> 2013 &copy; Thin Admin by Riaxe Systems. </div>
 
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -98,9 +200,9 @@ a:9:{i:0;s:165:"<!DOCTYPE html>
 <script src="/public/assets/sparkline/easy-pie-chart.js"></script>
 <script src="/public/js/select-checkbox.js"></script>
 <script src="/public/js/to-do-admin.js"></script>
-";s:2:"js";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:4:"
 
-";s:4:"file";s:71:"D:\phpStudy\WWW\phalcon\app\backend\config/../views/layout/header.phtml";s:4:"line";i:103;}}i:4;s:2481:"
+
+
 <!--switcher html start-->
 <div class="demo_changer active" style="right: 0px;">
   <div class="demo-icon"></div>
@@ -126,4 +228,3 @@ a:9:{i:0;s:165:"<!DOCTYPE html>
 <link rel="alternate stylesheet" type="text/css" href="/public/assets/switcher/j.css" title="j" media="all" />
 </body>
 </html>
-";}

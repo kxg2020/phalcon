@@ -6,5 +6,6 @@
     <file url="file://$PROJECT_DIR$/app/backend/views/image/add.phtml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/config/config.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/config/services.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/js/xuanmaomao/upload-to-qiniu.js" charset="UTF-8" />
   </component>
 </project>
