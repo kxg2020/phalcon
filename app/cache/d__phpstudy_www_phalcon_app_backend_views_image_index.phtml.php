@@ -80,69 +80,104 @@
 
 <div class="col-lg-12">
     <div class="widget">
-        <div class="widget-header"> <i class="icon-external-link"></i>
-            <h3> Multiple File Upload </h3>
+        <div class="widget-header"> <i class="icon-table"></i>
+            <h3>Table</h3>
         </div>
         <div class="widget-content">
+            <div class="body">
+                <table class="table table-striped table-images">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Image</th>
+                        <th>Info</th>
+                        <th>Info</th>
+                        <th class="hidden-xs">Date</th>
+                        <th class="hidden-xs">Size</th>
+                        <th class="hidden-xs"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td><img src="images/1.jpg"></td>
+                        <td> abc </td>
+                        <td class="hidden-xs"><p> <small> <strong>Dimensions:</strong> &nbsp; 200x150 </small> </p></td>
+                        <td class="hidden-xs"> August 18, 2013 </td>
+                        <td> 45.6 KB </td>
+                        <td class="hidden-xs"><button class="btn btn-sm btn-primary"> Edit </button>
+                            <button data-toggle="button" class="btn btn-sm btn-warning"> Delete </button></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td><img src="images/1.jpg"></td>
 
+                        <td> abc</td>
+                        <td class="hidden-xs"><p> <small> <strong>Dimensions:</strong> &nbsp; 200x150 </small> </p></td>
+                        <td class="hidden-xs"> August 18, 2013 </td>
+                        <td> 15.3 MB </td>
+                        <td class="hidden-xs"><button class="btn btn-sm btn-primary"> Edit </button>
+                            <button data-toggle="button" class="btn btn-sm btn-warning"> Delete </button></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td><img src="images/1.jpg"></td>
 
+                        <td> abc </td>
+                        <td class="hidden-xs"><p> <small> <strong>Dimensions:</strong> &nbsp; 200x150 </small> </p></td>
+                        <td class="hidden-xs"> September 18, 2013 </td>
+                        <td> 49.0 KB </td>
+                        <td class="hidden-xs"><button class="btn btn-sm btn-primary"> Edit </button>
+                            <button data-toggle="button" class="btn btn-sm btn-warning"> Delete </button></td>
+                    </tr>
+                    <tr>
+                        <td class="hidden-xs-portrait">4</td>
+                        <td><img src="images/1.jpg"></td>
 
-            <div class="panel-body">
-                <div class="alert alert-info">
-                    <i class="icon-info-sign"></i> This is a demo, and as such, no files are actually uploaded.
-                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                        <td> abc </td>
+                        <td class="hidden-xs"><p> <small> <strong>Dimensions:</strong> &nbsp; 200x150 </small> </p></td>
+                        <td class="hidden-xs"> September 18, 2013 </td>
+                        <td> 69.1 KB </td>
+                        <td class="hidden-xs"><button class="btn btn-sm btn-primary"> Edit </button>
+                            <button data-toggle="button" class="btn btn-sm btn-warning"> Delete </button></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td><img src="images/1.jpg"></td>
+
+                        <td> abc </td>
+                        <td class="hidden-xs"><p> <small> <strong>Dimensions:</strong> &nbsp; 200x150 </small> </p></td>
+                        <td class="hidden-xs"> October 3, 2013 </td>
+                        <td> 2.3 MB </td>
+                        <td class="hidden-xs"><button class="btn btn-sm btn-primary"> Edit </button>
+                            <button data-toggle="button" class="btn btn-sm btn-warning"> Delete </button></td>
+                    </tr>
+
+                    </tbody>
+                </table>
+                <div class="clearfix">
+                    <div class="pull-right">
+                        <div class="btn-group">
+                            <button data-toggle="dropdown" class="btn btn-sm btn-inverse dropdown-toggle"> &nbsp; Clear &nbsp; <i class="icon-caret-down"></i> </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Clear</a></li>
+                                <li><a href="#">Move ...</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-default btn-sm"> Send to ... </button>
+                    </div>
+                    <ul class="pagination no-margin">
+                        <li class="disabled"><a href="#">Prev</a></li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">Next</a></li>
+                    </ul>
                 </div>
-                <p>File Upload widget with multiple file selection, drag&amp;drop support, progress bars, validation and preview
-                    images, audio and video for jQuery.</p>
-                <p>Supports cross-domain, chunked and resumable file uploads and client-side image resizing.<br>
-                    Works with any server-side platform (PHP, Python, Ruby on Rails, Java, Node.js, Go etc.) that supports
-                    standard HTML form file uploads.</p>
-
-                <!-- The file upload form used as target for the file upload widget -->
-                <form id="fileupload" action="//jquery-file-upload.appspot.com/" method="POST" enctype="multipart/form-data" class="">
-                    <!-- Redirect browsers with JavaScript disabled to the origin page -->
-                    <noscript>&lt;input type="hidden" name="redirect" value="http://blueimp.github.io/jQuery-File-Upload/" /&gt;</noscript>
-                    <!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
-                    <div class="widget-content">
-                        <div class="form">
-                            <form action="#" class="form-horizontal">
-                                <div class="form-group" style="border: 1px solid black;height: 306px; ">
-
-                                </div>
-                            </form>
-                        </div>
-
-                    </div>
-                    <div class="row fileupload-buttonbar">
-                        <div class="col-lg-7">
-                            <div class="btn-toolbar">
-                                <!-- The fileinput-button span is used to style the file input field as button --><form method="post" action="<?= $this->url->get('backend/image/upload') ?>">
-                                    <span class="btn btn-success fileinput-button" style="position: relative">
-                                        <i class="icon-plus"></i>
-                                        <span>点击上传.</span>
-                                        <input style="position: absolute; top: 0;left: 0; opacity: 0;width: 100%;height: 100% " type="file" name="files" multiple="" id="file_upload">
-                                    </span>
-                                <!-- The loading indicator is shown during file processing -->              </form>
-                                <span class="fileupload-loading" ></span>
-                            </div>
-                        </div>
-                        <!-- The global progress information -->
-                        <div class="col-lg-5 fileupload-progress fade">
-                            <!-- The global progress bar -->
-                            <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100">
-                                <div class="progress-bar progress-bar-success" style="width:0%;"></div>
-                            </div>
-                            <!-- The extended global progress information -->
-                            <div class="progress-extended">&nbsp;</div>
-                        </div>
-                    </div>
-                    <!-- The table listing the files available for upload/download -->
-                    <table role="presentation" class="table table-striped">
-                        <tbody class="files"></tbody>
-                    </table>
-                </form>
             </div>
-<input type="hidden" value="" id="Qiniu">
         </div>
     </div>
 </div>
@@ -166,47 +201,7 @@
 <script src="/public/js/select-checkbox.js"></script>
 <script src="/public/js/to-do-admin.js"></script>
 
-<script src="/public/js/jquery-3.0.0.min.js"></script>
-<script src="/public/layer/layer.js"></script>
-<script src="/public/layer/laypage.js"></script>
-<script src="/public/layer/layui.js"></script>
-<script src="/public/js/jquery.html5upload.js"></script>
-<script>
-    $(function(){
-        var url = location.protocol+'//'+window.location.host+'/backend/image/upload';
-        $("#file_upload").h5upload({
-            url: url,
-            fileObjName: 'image',
-            fileTypeExts: 'jpg,png,gif,bmp,jpeg',
-            multi: true,
-            accept: '*/*',
-            fileSizeLimit: 1024 * 1024 * 1024 * 1024,
-            formData: {
-                type: 'card_positive'
-            },
-            onUploadProgress: function (file, uploaded, total) {
-                layer.msg('正在上传');
-            },
-            onUploadSuccess: function (file, data) {
-                data = $.parseJSON(data);
-                if (data.status == 0) {
-                    layer.alert(data.msg, {time: 1000})
-                } else {
-                    var _isMax = false;
-                    var path = data.url;
 
-                    if (_isMax == false) {
-                        layer.msg('上传成功', {time: 1000})
-                    }
-                }
-            },
-            onUploadError: function (file) {
-                layer.alert('上传失败');
-            }
-        });
-
-    });
-</script>
 
 <!--switcher html start-->
 <div class="demo_changer active" style="right: 0px;">
