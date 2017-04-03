@@ -4,8 +4,9 @@ a:9:{i:0;s:159:"<!DOCTYPE html>
   <title>旋猫猫之家</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Bootstrap -->
-  ";s:3:"css";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:3:"
-  ";s:4:"file";s:71:"D:\phpStudy\WWW\phalcon\app\backend\config/../views/layout/header.phtml";s:4:"line";i:8;}}i:1;s:4193:"
+  ";s:3:"css";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:4:"
+
+  ";s:4:"file";s:71:"D:\phpStudy\WWW\phalcon\app\backend\config/../views/layout/header.phtml";s:4:"line";i:9;}}i:1;s:4252:"
   <link href="/public/css/bootstrap.css" rel="stylesheet" media="screen">
   <link href="/public/layer/skin/default/layer.css" rel="stylesheet" media="screen">
   <link href="/public/css/thin-admin.css" rel="stylesheet" media="screen">
@@ -46,14 +47,14 @@ a:9:{i:0;s:159:"<!DOCTYPE html>
         <li class="current"> <a href="index.html"> <i class="icon-dashboard"></i> 我的首页 </a> </li>
         <li> <a href="#"> <i class="icon-table" ></i> 图片管理 <span class="label label-info pull-right"></span> <i class="arrow icon-angle-left"></i></a>
           <ul class="sub-menu">
-            <li> <a href="<?= $this->url->get('backend/image/index') ?>"> <i class="icon-angle-right"></i> 图片列表 </a> </li>
+            <li> <a href="<?= $this->url->get('backend/image/list') ?>"> <i class="icon-angle-right"></i> 图片列表 </a> </li>
             <li> <a href="<?= $this->url->get('backend/image/add') ?>"> <i class="icon-angle-right"></i> 图片添加 </a> </li>
           </ul>
         </li>
         <li> <a href="#"> <i class="icon-flag"></i> 文章管理 <span class="label label-info pull-right"></span> <i class="arrow icon-angle-left"></i></a>
           <ul class="sub-menu">
-            <li> <a href="icons-new.html"> <i class="icon-angle-right"></i> 文章列表 </a> </li>
-            <li> <a href="icons.html"> <i class="icon-angle-right"></i> 文章添加 </a> </li>
+            <li> <a href="<?= $this->url->get('backend/article/list') ?>"> <i class="icon-angle-right"></i> 文章列表 </a> </li>
+            <li> <a href="<?= $this->url->get('backend/article/add') ?>"> <i class="icon-angle-right"></i> 文章添加 </a> </li>
           </ul>
         </li>
         <li> <a href="gallery.html"> <i class="icon-picture"></i> Gallery </a> </li>
@@ -74,16 +75,16 @@ a:9:{i:0;s:159:"<!DOCTYPE html>
     <div class="content container">
       <div class="row">
         <div class="col-lg-12">
-          <h2 class="page-title">Dashboard <small>Statistics and more</small></h2>
+          <h2 class="page-title">Macarinal <small>Just for you</small></h2>
         </div>
       </div>
 ";s:4:"main";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:2:"
 
-";s:4:"file";s:71:"D:\phpStudy\WWW\phalcon\app\backend\config/../views/layout/header.phtml";s:4:"line";i:82;}}i:2;s:59:"
+";s:4:"file";s:71:"D:\phpStudy\WWW\phalcon\app\backend\config/../views/layout/header.phtml";s:4:"line";i:83;}}i:2;s:59:"
     </div>
   </div>
 </div>
-<div class="bottom-nav footer">";s:6:"footer";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:42:" 2013 &copy; Thin Admin by Riaxe Systems. ";s:4:"file";s:71:"D:\phpStudy\WWW\phalcon\app\backend\config/../views/layout/header.phtml";s:4:"line";i:86;}}i:3;s:860:"</div>
+<div class="bottom-nav footer">";s:6:"footer";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:42:" 2013 &copy; Thin Admin by Riaxe Systems. ";s:4:"file";s:71:"D:\phpStudy\WWW\phalcon\app\backend\config/../views/layout/header.phtml";s:4:"line";i:87;}}i:3;s:860:"</div>
 
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -100,7 +101,7 @@ a:9:{i:0;s:159:"<!DOCTYPE html>
 <script src="/public/js/to-do-admin.js"></script>
 ";s:2:"js";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:2:"
 
-";s:4:"file";s:71:"D:\phpStudy\WWW\phalcon\app\backend\config/../views/layout/header.phtml";s:4:"line";i:103;}}i:4;s:2455:"
+";s:4:"file";s:71:"D:\phpStudy\WWW\phalcon\app\backend\config/../views/layout/header.phtml";s:4:"line";i:104;}}i:4;s:2455:"
 <!--switcher html start-->
 <div class="demo_changer active" style="right: 0px;">
   <div class="demo-icon"></div>

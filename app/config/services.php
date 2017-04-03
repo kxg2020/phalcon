@@ -8,6 +8,7 @@ use Phalcon\Mvc\Model\Metadata\Memory as MetaDataAdapter;
 use Phalcon\Session\Adapter\Files as SessionAdapter;
 use Phalcon\Flash\Direct as Flash;
 use Phalcon\Mvc\Model\Transaction\Manager as TransactionManager;
+use Phalcon\Db\Adapter\Pdo\Mysql as PdoMysql;
 /**
  * Shared configuration service
  */
@@ -111,7 +112,7 @@ $di->setShared('session', function () {
 });
 
 
-//>> �������ݿ�
+//>> 操作数据库类
 $di->set('mysql', function (){
     $config = $this->getConfig();
     return MysqlDatabase::getIns('database',$config);
@@ -124,12 +125,11 @@ $di->set('upload', function (){
     'rootPath'      =>  './uploads/', //保存根路径
     ];
     $config = [
-
-    'FILE_UPLOAD_TYPE'=>    'Qiniu',
-    'secretKey'      => 'x5OoAluQ5x58FpzL3rONPH9rj1jnv0xe8HDwey0R', //七牛密码
-    'accessKey'      => 'XQSWu87QQg5Poej0i1EKhFnh0ao5q47BfhLzxOIV', //七牛用户
-    'domain'         => 'ocavymzvy.bkt.clouddn.com/', //域名
-    'bucket'         => '0418', //空间名称
+    'FILE_UPLOAD_TYPE'=>'Qiniu',
+    'secretKey'      => '-ozcCzNuPfZQePdMUtEHzp6gfuQQfS-GR4IOmxen', //七牛密码
+    'accessKey'      => 'Oxorx2oRMYXe8bZCRvuoNpyOexkJAgKPgs14Gv4O', //七牛用户
+    'domain'         => 'on58ea572.bkt.clouddn.com', //域名
+    'bucket'         => 'macarin', //空间名称
     'timeout'        => 300, //超时时间
     ];
     return new Uploads($_config,'',$config);
@@ -144,16 +144,21 @@ $di->setShared( "transactions",function () {
 $di->set('errmsg',function(){
     return new GetErrMsg();
 });
+
 //>> 注册常用类
 $di->setShared('common', function (){
     return new Common();
 });
+
 //>> 注册EXCEL组件 Register a PHPExcel component
 $di->set('phpexcel', function(){
     return new PHPExcelTreat();
 });
+
 $di->setShared('aes256',function(){
     return new AES256();
 });
+
+
 
 

@@ -1,0 +1,65 @@
+{% extends "layout/header.phtml" %}
+
+{% block css%}
+<link rel="stylesheet" href="/public/css/xuanmaomao/table-center.css">
+<link href="/public/css/xuanmaomao/pagination.css" rel="stylesheet">
+{% endblock %}
+
+{% block main %}
+<div class="row">
+    <div class="col-lg-12">
+        <div class="widget">
+            <div class="widget-header"> <i class="icon-table"></i>
+                <h3>文章列表</h3>
+            </div>
+            <div class="widget-content">
+<input type="hidden" value="{{pages}}" name="pages">
+                <div class="example_alt_pagination">
+                    <div id="container">
+                        <div class="full_width big"></div>
+                        <table class="table table-bordered table-hover">
+                            <tr >
+                                <th align="center">编号</th>
+                                <th>标题</th>
+                                <th>类型</th>
+                                <th>作者</th>
+                                <th>时间</th>
+                                <th>操作</th>
+                            </tr>
+                            <tbody id="tBody">
+                            {% for a in articles%}
+                            <tr>
+                                <td>{{a['id']}}</td>
+                                <td>{{a['title']}}</td>
+                                <td>{{a['type']}}</td>
+                                <td>{{a['author']}}</td>
+                                <td>{{a['date']}}</td>
+                                <td>
+                                    <input type="button" data-id="{{a['id']}}" class="btn  btn-primary" value="编辑">
+
+                                    &nbsp;
+                                    <input type="button" data-id="{{a['id']}}" class="btn  btn-danger" value="删除">
+                                </td>
+                            </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                        <div id="demo7">{{pages}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block js %}
+<script src="/public/js/jquery-3.0.0.min.js"></script>
+<script src="/public/layer/layer.js"></script>
+<script src="/public/layer/laypage.js"></script>
+<script src="/public/layer/layui.js"></script>
+<script src="/public/js/jquery.html5upload.js"></script>
+<script src="/public/js/xuanmaomao/upload-to-qiniu.js"></script>
+<script type="text/javascript" src="/public/ckeditor/ckeditor.js"></script>
+<script type="text/javascript" src="/public/js/xuanmaomao/article-pagination.js"></script>
+{% endblock %}

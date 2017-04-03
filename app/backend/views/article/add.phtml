@@ -1,0 +1,36 @@
+{% extends "layout/header.phtml" %}
+
+{% block css%}
+
+{% endblock %}
+
+
+
+{% block main %}
+<div class="widget-header"> <i class="icon-table"></i>
+    <h3>文章添加</h3>
+</div>
+
+<div style="">
+
+        <div class="input-group">
+            <span class="input-group-addon">文章标题</span>
+            <input type="text" autofocus class="form-control" placeholder="请输入标题" name="title">
+        </div>
+</div>
+<textarea id="TextArea1" cols="20" rows="10" class="ckeditor"></textarea>
+<div class="doc-buttons">
+    <button class="btn btn-sm btn-success" id="ok" style="margin-top: 10px"> 发表文章 </button>  </div>
+{% endblock %}
+
+
+{% block js %}
+<script src="/public/js/jquery-3.0.0.min.js"></script>
+<script src="/public/layer/layer.js"></script>
+<script src="/public/layer/laypage.js"></script>
+<script src="/public/layer/layui.js"></script>
+<script src="/public/js/jquery.html5upload.js"></script>
+<script src="/public/js/xuanmaomao/upload-to-qiniu.js"></script>
+<script type="text/javascript" src="/public/ckeditor/ckeditor.js"></script>
+<script type="text/javascript" src="/public/js/xuanmaomao/article-to-php.js"></script>
+{% endblock %}

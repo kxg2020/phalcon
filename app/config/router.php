@@ -8,9 +8,6 @@ use Phalcon\Mvc\Application;
 use Phalcon\DI\FactoryDefault;
 use Phalcon\Db\Adapter\Pdo\Mysql as DbAdapter;
 
-// Create a DI
-$di = new FactoryDefault();
-
 $di->set('router', function () {
 
     $router = new Router();

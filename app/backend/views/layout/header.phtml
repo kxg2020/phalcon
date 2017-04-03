@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Bootstrap -->
   {% block css %}
+
   {% endblock %}
   <link href="/public/css/bootstrap.css" rel="stylesheet" media="screen">
   <link href="/public/layer/skin/default/layer.css" rel="stylesheet" media="screen">
@@ -46,14 +47,14 @@
         <li class="current"> <a href="index.html"> <i class="icon-dashboard"></i> 我的首页 </a> </li>
         <li> <a href="#"> <i class="icon-table" ></i> 图片管理 <span class="label label-info pull-right"></span> <i class="arrow icon-angle-left"></i></a>
           <ul class="sub-menu">
-            <li> <a href="{{url('backend/image/index')}}"> <i class="icon-angle-right"></i> 图片列表 </a> </li>
+            <li> <a href="{{url('backend/image/list')}}"> <i class="icon-angle-right"></i> 图片列表 </a> </li>
             <li> <a href="{{url('backend/image/add')}}"> <i class="icon-angle-right"></i> 图片添加 </a> </li>
           </ul>
         </li>
         <li> <a href="#"> <i class="icon-flag"></i> 文章管理 <span class="label label-info pull-right"></span> <i class="arrow icon-angle-left"></i></a>
           <ul class="sub-menu">
-            <li> <a href="icons-new.html"> <i class="icon-angle-right"></i> 文章列表 </a> </li>
-            <li> <a href="icons.html"> <i class="icon-angle-right"></i> 文章添加 </a> </li>
+            <li> <a href="{{url('backend/article/list')}}"> <i class="icon-angle-right"></i> 文章列表 </a> </li>
+            <li> <a href="{{url('backend/article/add')}}"> <i class="icon-angle-right"></i> 文章添加 </a> </li>
           </ul>
         </li>
         <li> <a href="gallery.html"> <i class="icon-picture"></i> Gallery </a> </li>
@@ -74,7 +75,7 @@
     <div class="content container">
       <div class="row">
         <div class="col-lg-12">
-          <h2 class="page-title">Dashboard <small>Statistics and more</small></h2>
+          <h2 class="page-title">Macarinal <small>Just for you</small></h2>
         </div>
       </div>
 {%  block main %}
