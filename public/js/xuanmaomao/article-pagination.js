@@ -24,18 +24,48 @@ $(function(){
                                 $('#tBody').append(' <tr>'+
                                     '<td>'+ v.id+'</td>'+
                                 '<td>'+ v.title+'</td>'+
-                        '<td>'+ v.type+'</td>'+
+                        '<td><img style="height: 30px;width: 30px" src="/public/images/xuanmaomao/article/'+ v.type+'.png"></td>'+
                 '<td>'+ v.author+'</td>'+
             '<td>'+ v.date+'</td>'+
         '<td>'+
-        '<input type="button" data-id="'+ v.id+'" class="btn  btn-primary" value="编辑">'+
-        '&nbsp;'+
-    '<input type="button" data-id="'+ v.id+'" class="btn  btn-danger" value="删除">'+
+        '<input type="button" data-id="'+ v.id+'" class="btn edit  btn-primary" value="编辑">'+
+        '&nbsp;'+'<a href="#myModal" data-toggle="modal" > '+
+    '<input type="button" data-id="'+ v.id+'" class="btn  btn-danger delete" value="删除"></a>'+
         '</td>'+
         '</tr>');
                             });
                         }
                     });
+                }
+            }
+        });
+    });
+
+    $('body').on('click','.delete',function(){
+
+        id = $(this).attr('data-id');
+        //>> 将id传递给modal
+        $('.deleteTrue').attr('data-id',id);
+    });
+    $('body').on('click','.deleteTrue',function(){
+        id = $(this).attr('data-id');
+        url = location.protocol+'//'+window.location.host+'/backend/article/delete';
+        $.ajax({
+            'type':'post',
+            'dataType':'json',
+            'url':url,
+            'data':{
+                'id':id
+            },
+            success:function(result){
+
+                if(result.status == 1){
+
+                    location.reload();
+
+                }else{
+
+                    layer.msg('删除失败');
                 }
             }
         });

@@ -141,7 +141,8 @@ class ImageController extends Controller{
         $paramArr = $_REQUEST;
 
         if(!empty($paramArr)){
-            if(isset($paramArr['id']) && !empty($paramArr['id']) && is_numeric($paramArr['id'])){
+
+            if(isset($paramArr['id'])  && is_numeric($paramArr['id'])){
 
                 $imageModel = new XmImage();
 

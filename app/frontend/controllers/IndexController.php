@@ -8,6 +8,8 @@ class IndexController extends Controller{
      * Õ¹Ê¾Ê×Ò³
      */
     public function indexAction(){
-        echo "This is Home";
+
+
+        $this->view->pick('index/index');
     }
 }

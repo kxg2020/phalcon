@@ -1,6 +1,7 @@
 <?php
 namespace Multiple\Backend\Controllers;
 
+use Multiple\Backend\Models\XmArticle;
 use Phalcon\Mvc\Controller;
 
 class ArticleController extends Controller{
@@ -23,7 +24,7 @@ class ArticleController extends Controller{
                 $pgSize = $paramArr['pgSize'];
             }
         }
-        $articleList = $this->mysql->getList('','*','','','','xm_article');
+        $articleList = $this->mysql->getList('','*','create_time desc','','','xm_article');
 
         foreach($articleList['allrow'] as $key => &$value){
             $value['date'] = date('Y-m-d',$value['create_time']);
@@ -81,6 +82,34 @@ class ArticleController extends Controller{
         $this->view->pick('article/add');
     }
 
+    /**
+     * 删除文章
+     */
+    public function deleteAction(){
+
+        $paramArr = $_REQUEST;
+
+        if(!empty($paramArr)){
+            if(isset($paramArr['id']) && !empty($paramArr) && is_numeric($paramArr['id'])){
+
+                $articleModel = new XmArticle();
+                $res = $articleModel->articleDelete($paramArr['id']);
+                if($res){
+
+                    die($this->common->_printSuccess());
+                }else{
+
+                    die($this->common->_printError('10004'));
+                }
+            }else{
+
+                die($this->common->_printError('10002'));
+            }
+        }else{
+
+            die($this->common->_printError('10002'));
+        }
+    }
 
 
     /**

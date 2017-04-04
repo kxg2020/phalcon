@@ -10,10 +10,11 @@ class XmImage extends Model{
      */
     public function imageList(){
 
-        $sql = "SELECT * FROM xm_image WHERE";
-        $sql .= "`type` = 1";
+        $sql = "SELECT * FROM xm_image WHERE ";
+        $sql .= "`type` = 1  ORDER BY create_time desc";
 
         $imageList = $this->getReadConnection()->fetchAll($sql);
+
         return $imageList;
 }
 
@@ -24,7 +25,7 @@ class XmImage extends Model{
 
         $sql = "DELETE FROM xm_image WHERE id = {$id} ";
 
-        $res = $this->getWriteConnection()->query($sql);
+        $res = $this->getWriteConnection()->execute($sql);
 
         return $res;
     }

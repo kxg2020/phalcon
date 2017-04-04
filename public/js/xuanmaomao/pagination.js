@@ -25,13 +25,13 @@ $(function(){
                                             '<td style="vertical-align:'+ 'middle">'+ v.id+'</td>'+
                                         '<td style="vertical-align: middle">' +
                                             '<img src="'+ v.image_url+'"></td>'+ '<td style="vertical-align: middle">'+
-                                            '<img src="/public/images/xuanmaomao/'+ v.type+'.png"></td>'+
+                                            '<img src="/public/images/xuanmaomao/'+ v.type+'.png" style="height: 30px;width: 30px"></td>'+
                             '<td  style="vertical-align: middle"><strong>'+ v.date+'</strong> &nbsp;</td>'+
                     '<td class="hidden-xs" style="vertical-align: middle">'+ '<input type="text" value="'+ v.sort+'" class="form-control parsley-validated" name="sort"'+ 'style="width: 30px;"> </td>'+
                     '<td style="vertical-align: middle" >'+ '<li class="'+ v.icon+' change" style="cursor: pointer" data-id="'+ v.id+'" ></li>' +
                         '</td>'+
-                '<td class="hidden-xs" style="vertical-align: middle"><button class="btn btn-sm btn-primary"> 编辑 </button>&nbsp;'+
-                '<a href="#myModal" data-toggle="modal" > <button data-toggle="button" class="btn btn-sm btn-warning"> 删除'+ '</button></a></td></tr>'
+                '<td class="hidden-xs" style="vertical-align: middle"><button class="btn btn-sm btn-primary" data-id="'+ v.id+'"> 编辑 </button>&nbsp;'+
+                '<a href="#myModal" data-toggle="modal" > <button data-toggle="button" class="btn btn-sm btn-warning delete" data-id="'+ v.id+'"> 删除'+ '</button></a></td></tr>'
                                         );
                                     });
                                 }
@@ -99,9 +99,9 @@ $(function(){
         //>> 确认删除
     });
     $('.deleteTrue').click(function(){
-        location.reload();
         id = $(this).attr('data-id');
-        var url = location.protocol+'//'+window.location.host+'/backend/image/delete'
+
+        var url = location.protocol+'//'+window.location.host+'/backend/image/delete';
         $.ajax({
             'type':'post',
             'dataType':'json',
@@ -110,7 +110,7 @@ $(function(){
                 'id':id
             },
             success:function(result){
-
+                location.reload();
             }
         });
     });
