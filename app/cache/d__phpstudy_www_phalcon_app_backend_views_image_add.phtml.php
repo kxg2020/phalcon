@@ -1,12 +1,12 @@
-a:9:{i:0;s:165:"<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
   <title>旋猫猫之家</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Bootstrap -->
-  ";s:3:"css";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:6:"
+  
 
-  ";s:4:"file";s:71:"D:\phpStudy\WWW\phalcon\app\backend\config/../views/layout/header.phtml";s:4:"line";i:9;}}i:1;s:4324:"
+  
   <link href="/public/css/bootstrap.css" rel="stylesheet" media="screen">
   <link href="/public/layer/skin/default/layer.css" rel="stylesheet" media="screen">
   <link href="/public/css/thin-admin.css" rel="stylesheet" media="screen">
@@ -78,13 +78,72 @@ a:9:{i:0;s:165:"<!DOCTYPE html>
           <h2 class="page-title">Macarinal <small>Just for you</small></h2>
         </div>
       </div>
-";s:4:"main";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:4:"
 
-";s:4:"file";s:71:"D:\phpStudy\WWW\phalcon\app\backend\config/../views/layout/header.phtml";s:4:"line";i:83;}}i:2;s:63:"
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="widget">
+                <div class="widget-header"> <i class="icon-external-link"></i>
+                    <h3> Multiple File Upload </h3>
+                </div>
+                <div class="widget-content">
+
+
+
+                    <div class="panel-body">
+                        <p>File Upload widget with multiple file selection, drag&amp;drop support, progress bars, validation and preview
+                            images, audio and video for jQuery.</p>
+                        <p>Supports cross-domain, chunked and resumable file uploads and client-side image resizing.<br>
+                            Works with any server-side platform (PHP, Python, Ruby on Rails, Java, Node.js, Go etc.) that supports
+                            standard HTML form file uploads.</p>
+                        <div class="row" id="image_box">
+
+
+                        </div>
+                        <!-- The file upload form used as target for the file upload widget -->
+                        <form id="fileupload" action="//jquery-file-upload.appspot.com/" method="POST" enctype="multipart/form-data" class="">
+                            <!-- Redirect browsers with JavaScript disabled to the origin page -->
+
+                            <!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
+
+                            <!-- The table listing the files available for upload/download -->
+                            <table role="presentation" class="table table-striped">
+                                <tbody class="files"></tbody>
+                            </table>
+                            <div class="row fileupload-buttonbar">
+                                <div class="col-lg-7">
+                                    <div class="btn-toolbar">
+                                        <!-- The fileinput-button span is used to style the file input field as button --><form method="post" action="<?= $this->url->get('backend/image/upload') ?>">
+                                    <span class="btn btn-success fileinput-button" style="position: relative">
+                                        <i class="icon-plus"></i>
+                                        <span>点击上传.</span>
+                                        <input style="position: absolute; top: 0;left: 0; opacity: 0;width: 100%;height: 100% " type="file" name="files" multiple="" id="file_upload">
+                                    </span>
+                                            <!-- The loading indicator is shown during file processing -->              </form>
+                                        <span class="fileupload-loading" ></span>
+                                    </div>
+                                </div>
+                                <!-- The global progress information -->
+                                <div class="col-lg-5 fileupload-progress fade">
+                                    <!-- The global progress bar -->
+                                    <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar progress-bar-success" style="width:0%;"></div>
+                                    </div>
+                                    <!-- The extended global progress information -->
+                                    <div class="progress-extended">&nbsp;</div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
     </div>
   </div>
 </div>
-<div class="bottom-nav footer">";s:6:"footer";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:42:" 2013 &copy; Thin Admin by Riaxe Systems. ";s:4:"file";s:71:"D:\phpStudy\WWW\phalcon\app\backend\config/../views/layout/header.phtml";s:4:"line";i:87;}}i:3;s:875:"</div>
+<div class="bottom-nav footer"> 2013 &copy; Thin Admin by Riaxe Systems. </div>
 
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -99,9 +158,14 @@ a:9:{i:0;s:165:"<!DOCTYPE html>
 <script src="/public/assets/sparkline/easy-pie-chart.js"></script>
 <script src="/public/js/select-checkbox.js"></script>
 <script src="/public/js/to-do-admin.js"></script>
-";s:2:"js";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:4:"
 
-";s:4:"file";s:71:"D:\phpStudy\WWW\phalcon\app\backend\config/../views/layout/header.phtml";s:4:"line";i:104;}}i:4;s:2481:"
+<script src="/public/js/jquery-3.0.0.min.js"></script>
+<script src="/public/layer/layer.js"></script>
+<script src="/public/layer/laypage.js"></script>
+<script src="/public/layer/layui.js"></script>
+<script src="/public/js/jquery.html5upload.js"></script>
+<script src="/public/js/xuanmaomao/upload-to-qiniu.js"></script>
+
 <!--switcher html start-->
 <div class="demo_changer active" style="right: 0px;">
   <div class="demo-icon"></div>
@@ -127,4 +191,3 @@ a:9:{i:0;s:165:"<!DOCTYPE html>
 <link rel="alternate stylesheet" type="text/css" href="/public/assets/switcher/j.css" title="j" media="all" />
 </body>
 </html>
-";}
