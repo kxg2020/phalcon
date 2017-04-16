@@ -1,12 +1,12 @@
-a:9:{i:0;s:165:"<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
   <title>旋猫猫之家</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Bootstrap -->
-  ";s:3:"css";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:6:"
+  
+<link href="/public/css/xuanmaomao/pagination.css" rel="stylesheet">
 
-  ";s:4:"file";s:71:"D:\phpStudy\WWW\phalcon\app\backend\config/../views/layout/header.phtml";s:4:"line";i:9;}}i:1;s:4324:"
   <link href="/public/css/bootstrap.css" rel="stylesheet" media="screen">
   <link href="/public/layer/skin/default/layer.css" rel="stylesheet" media="screen">
   <link href="/public/css/thin-admin.css" rel="stylesheet" media="screen">
@@ -78,13 +78,73 @@ a:9:{i:0;s:165:"<!DOCTYPE html>
           <h2 class="page-title">Macarinal <small>Just for you</small></h2>
         </div>
       </div>
-";s:4:"main";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:4:"
 
-";s:4:"file";s:71:"D:\phpStudy\WWW\phalcon\app\backend\config/../views/layout/header.phtml";s:4:"line";i:83;}}i:2;s:63:"
+<div class="col-lg-12">
+    <div class="widget">
+        <div class="widget-header"> <i class="icon-table"></i>
+            <h3>图片列表</h3>
+        </div>
+        <div class="widget-content">
+            <div class="body">
+                <table class="table table-striped table-images">
+                    <thead>
+                    <tr>
+                        <th>编号</th>
+                        <th>缩略图</th>
+                        <th>图片类型</th>
+                        <th>创建时间</th>
+                        <th class="hidden-xs">排序</th>
+                        <th class="hidden-xs">显示</th>
+                        <th class="hidden-xs">操作</th>
+                    </tr>
+                    </thead>
+                    <tbody id="tBody">
+                    <?php foreach ($images as $i) { ?>
+                    <tr>
+                        <td style="vertical-align: middle"><?= $i['id'] ?></td>
+                        <td style="vertical-align: middle"><img src="<?= $i['image_url'] ?>"></td>
+
+                        <td style="vertical-align: middle"><?php if ($i['type'] == 1) { ?><img src="/public/images/xuanmaomao/<?= $i['type'] ?>.png" style="height: 30px;width: 30px"><?php } ?></td>
+                        <td  style="vertical-align: middle"><strong><?= $i['date'] ?> </strong> &nbsp;</td>
+                        <td class="hidden-xs" style="vertical-align: middle"> <input type="text" value="<?= $i['sort'] ?>" class="form-control parsley-validated" name="sort" style="
+    width: 30px;
+"> </td>
+                        <td style="vertical-align: middle" ><?php if ($i['is_active'] == 1) { ?> <li class="icon-ok change" style="cursor: pointer" data-id="<?= $i['id'] ?>" ></li>
+<?php } else { ?><li class="icon-remove change" style="cursor: pointer" data-id="<?= $i['id'] ?>"></li><?php } ?></td>
+                        <td class="hidden-xs" style="vertical-align: middle"><button class="btn btn-sm btn-primary"> 编辑 </button>&nbsp;
+                            <a href="#myModal" data-toggle="modal" > <button data-toggle="button" class="btn btn-sm btn-warning delete" data-id="<?= $i['id'] ?>"> 删除 </button></a></td>
+                    </tr>
+                    <?php } ?>
+                    </tbody>
+                </table>
+                <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade " style="display: none;" data-id="0">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button aria-hidden="true" data-dismiss="modal" class="close" type="button">x</button>
+                                <h4 class="modal-title">旋猫猫的提醒</h4>
+                            </div>
+                            <div class="modal-body"> <img src="/public/images/xuanmaomao/2.png">小主,你确定要删除吗? </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">我不</button>
+                                <button  type="button" class="btn btn-success deleteTrue">是哒</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <div id="demo7"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="hidden" value="<?= $pages ?>" name="pages">
+</div>
+
     </div>
   </div>
 </div>
-<div class="bottom-nav footer">";s:6:"footer";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:42:" 2013 &copy; Thin Admin by Riaxe Systems. ";s:4:"file";s:71:"D:\phpStudy\WWW\phalcon\app\backend\config/../views/layout/header.phtml";s:4:"line";i:87;}}i:3;s:875:"</div>
+<div class="bottom-nav footer"> 2013 &copy; Thin Admin by Riaxe Systems. </div>
 
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -99,9 +159,15 @@ a:9:{i:0;s:165:"<!DOCTYPE html>
 <script src="/public/assets/sparkline/easy-pie-chart.js"></script>
 <script src="/public/js/select-checkbox.js"></script>
 <script src="/public/js/to-do-admin.js"></script>
-";s:2:"js";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:4:"
 
-";s:4:"file";s:71:"D:\phpStudy\WWW\phalcon\app\backend\config/../views/layout/header.phtml";s:4:"line";i:104;}}i:4;s:2481:"
+<script src="/public/js/jquery-3.0.0.min.js"></script>
+<script src="/public/layer/layer.js"></script>
+<script src="/public/layer/laypage.js"></script>
+<script src="/public/layer/layui.js"></script>
+<script src="/public/js/xuanmaomao/pagination.js"></script>
+<script src="/public/layer/layui.js"></script>
+<script src="/public/layer/laypage.js"></script>
+
 <!--switcher html start-->
 <div class="demo_changer active" style="right: 0px;">
   <div class="demo-icon"></div>
@@ -127,4 +193,3 @@ a:9:{i:0;s:165:"<!DOCTYPE html>
 <link rel="alternate stylesheet" type="text/css" href="/public/assets/switcher/j.css" title="j" media="all" />
 </body>
 </html>
-";}

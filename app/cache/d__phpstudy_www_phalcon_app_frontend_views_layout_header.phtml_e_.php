@@ -1,10 +1,10 @@
-<!DOCTYPE HTML>
+a:7:{i:0;s:54:"<!DOCTYPE HTML>
 <html>
 <head>
 <title>Home</title>
-{% block css %}
+";s:3:"css";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:4:"
 
-{% endblock %}
+";s:4:"file";s:72:"D:\phpStudy\WWW\phalcon\app\frontend\config/../views/layout/header.phtml";s:4:"line";i:7;}}i:1;s:2972:"
 <link href="/public/frontend/banner/css/bootstrap.css" rel='stylesheet' type='text/css' />
 <link href="/public/frontend/banner/css/style.css" rel='stylesheet' type='text/css' />
 <link rel="stylesheet" href="/public/frontend/banner/css/lightbox.css">
@@ -43,7 +43,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
 						<li class="active"><a href="index.html">首页</a></li>
-						<li><a href="{{url('frontend/article/list')}}">日志</a></li>
+						<li><a href="<?= $this->url->get('frontend/article/list') ?>">日志</a></li>
 						<li class="dropdown">
 							<a href="#" class="scroll dropdown-toggle" data-toggle="dropdown">Reviews<b class="caret"></b></a>
 							<ul class="dropdown-menu">
@@ -52,7 +52,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<li><a href="review.html">Review 3</a></li>
 							</ul>
 						</li>
-						<li><a href="{{url('frontend/photo/list')}}">照片墙</a></li>
+						<li><a href="<?= $this->url->get('frontend/photo/list') ?>">照片墙</a></li>
 						<li><a href="shortcodes.html">关于我们</a></li>
 						<li><a href="contact.html">管理</a></li>
 					</ul>
@@ -66,9 +66,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 	<div class="clearfix"></div>
 </div>
-{% block main%}
+";s:4:"main";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:4:"
 
-{% endblock %}
+";s:4:"file";s:72:"D:\phpStudy\WWW\phalcon\app\frontend\config/../views/layout/header.phtml";s:4:"line";i:71;}}i:2;s:1659:"
 <!-- footer -->
 <div class="footer">
 	 <div class="container">
@@ -113,8 +113,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	 </div>
 </div>
 <!---->
-{% block js %}
+";s:2:"js";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:4:"
 
-{% endblock %}
+";s:4:"file";s:72:"D:\phpStudy\WWW\phalcon\app\frontend\config/../views/layout/header.phtml";s:4:"line";i:118;}}i:3;s:18:"
 </body>
-</html>
+</html>";}
