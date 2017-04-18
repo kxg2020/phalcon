@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/app/backend/Module.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/backend/controllers/ArticleController.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/backend/controllers/CommonController.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/backend/controllers/ImageController.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/backend/controllers/IndexController.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/backend/views/article/add.phtml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/backend/views/article/list.phtml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/backend/views/image/add.phtml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/config/config.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/config/services.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/js/xuanmaomao/article-pagination.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/js/xuanmaomao/article-to-php.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/js/xuanmaomao/login.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/js/xuanmaomao/pagination.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/js/xuanmaomao/upload-to-qiniu.js" charset="UTF-8" />
+  </component>
+</project>
