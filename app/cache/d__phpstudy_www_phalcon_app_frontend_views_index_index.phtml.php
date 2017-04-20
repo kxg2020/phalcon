@@ -77,7 +77,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<li><span>Image 03</span><div><h3>我</h3></div></li>
 			<li><span>Image 04</span><div><h3>的</h3></div></li>
 			<li><span>Image 05</span><div><h3>眼</h3></div></li>
-			<li><span>Image 06</span><div><h3>^_^</h3></div></li>
+			<li><span>Image 06</span><div><h3>..</h3></div></li>
 		</ul>
 
 </div>

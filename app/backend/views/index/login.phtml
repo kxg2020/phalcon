@@ -26,12 +26,11 @@
                 <fieldset>
                     <div class="form-group no-margin">
                         <label for="email">用户名</label>
-
                         <div class="input-group input-group-lg">
                                 <span class="input-group-addon">
                                     <i class="icon-user"></i>
                                 </span>
-                            <input type="email" placeholder="请输入您的用户名" class="form-control input-lg" id="email">
+                            <input type="text" placeholder="请输入您的用户名" class="form-control input-lg" id="email" name="username">
                         </div>
 
                     </div>
@@ -43,7 +42,7 @@
                                 <span class="input-group-addon">
                                     <i class="icon-lock"></i>
                                 </span>
-                            <input type="password" placeholder="请输入您的密码" class="form-control input-lg" id="password">
+                            <input type="password" placeholder="请输入您的密码" class="form-control input-lg" id="password" name="password">
                         </div>
 
                     </div>
@@ -52,7 +51,7 @@
 				<label class="checkbox">
 				<div class="checker"><span><input type="checkbox" value="1" name="remember"></span></div> 记住我的登录信息
 				</label>
-				<button class="btn btn-warning pull-right" type="submit">
+				<button class="btn btn-warning pull-right" type="button" id="submit">
 				登录 <i class="m-icon-swapright m-icon-white"></i>
 				</button> 
                 <div class="forgot"><a href="#" class="forgot">忘记密码了吗?</a></div>
@@ -66,21 +65,9 @@
    </div>
 </div>
 
-
-
-
-
-
-
-
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
 <script src="/public/js/jquery.js"></script>
 <script src="/public/js/bootstrap.min.js"></script>
-
-
-
- 
-
 <!--switcher html start-->
 <div class="demo_changer active" style="right: 0px;">
                 <div class="demo-icon"></div>
@@ -107,6 +94,10 @@
     <!--switcher html end-->
 <script src="/public/assets/switcher/switcher.js"></script>
 <script src="/public/assets/switcher/moderziner.custom.js"></script>
+<script src="/public/js/xuanmaomao/login.js"></script>
+<script src="/public/layer/layer.js"></script>
+
+
 <link href="/public/assets/switcher/switcher.css" rel="stylesheet">
 <link href="/public/assets/switcher/switcher-defult.css" rel="stylesheet">
 <link rel="alternate stylesheet" type="text/css" href="/public/assets/switcher/a.css" title="a" media="all" />
