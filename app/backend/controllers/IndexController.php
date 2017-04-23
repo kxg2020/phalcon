@@ -3,12 +3,22 @@ namespace Multiple\Backend\Controllers;
 
 use Phalcon\Mvc\Controller;
 
-class IndexController extends Controller{
+class IndexController extends CommonController{
 
     /**
      * 展示登录页
      */
     public function loginAction(){
+
+        //>> 判断是否登录
+        if($this->isLogin == 1){
+
+            //>> 已经登录跳转到首页
+           return $this->dispatcher->forward([
+                'controller'=>'Index',
+                'action'=>'index',
+            ]);
+        }
 
         $this->view->pick('index/login');
 
@@ -19,6 +29,14 @@ class IndexController extends Controller{
      */
     public function indexAction(){
 
+        //>> 判断是否登录
+        if($this->isLogin == 0){
+
+           return $this->dispatcher->forward([
+                'controller'=>'Index',
+                'action'=>'login',
+            ]);
+        }
         $this->view->pick('index/index');
 
     }
@@ -46,7 +64,7 @@ class IndexController extends Controller{
                     $this->session->set(md5('admin'),$session_token);
                     //>> 将session保存到数据库
                     $sessionData = ['session_token'=>$session_token];
-                    $this->mysql->insertDat($sessionData,'xm_user');
+                    $this->mysql->updateData(['id'=>$res['id']],$sessionData,'xm_user');
                     //>> 是否记住个人登录信息
                     if(isset($paramArr['remember']) && $paramArr['remember'] == 1){
 
@@ -57,9 +75,10 @@ class IndexController extends Controller{
 
                         $cookieData = ['cookie_token'=>$cookie_token];
                         //>> 将token保存到数据库
-                        $this->mysql->insertData($cookieData,'xm_user');
+                        $this->mysql->updateData(['id'=>$res['id']],$cookieData,'xm_user');
                     }
 
+                    //>> 跳转到首页
                     die($this->common->_printSuccess());
                 }else{
 

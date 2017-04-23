@@ -6,7 +6,7 @@ $(function(){
         //>>  获取用户名和密码
         username = $('input[name = username]').val();
         password = $('input[name = password]').val();
-        remember = $('input[name = remember]').val();
+        remember = $('input[name = remember]:checked').val();
         if(username == ''){
             layer.tips('用户名不能为空','input[name = username]');
             return false;
