@@ -85,9 +85,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="welcome">
 	<div class="container">
 		<div class="welcome-info">
-			<h3>Welcome</h3>
-			<h4>Lorem ipsum dolor sit amet consectetur adipiscing elit.</h4>
-			<p> condimentum imperdiet placerat. Nullam in nisl eget turpis convallis venenatis. Cras cursus elementum justo nec bibendum. Donec quis nisi cursus, vestibulum elit eget, sagittis ligula.</p>
+			<h3>从前慢</h3>
+			<h4>从前的日色变得慢，车、马、邮件都慢，一生只够爱一个人。</h4>
+			<p> 从前的锁也很好看，钥匙精美有样子。</p>
 		</div>
 	</div>
 </div>
@@ -96,11 +96,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="container">
 		<div class="col-md-8 content-left">
 			<div class="information">
-				<h4>Information</h4>
+				<h4>博主推荐</h4>
 				<div class="information_grids">
 					<div class="info">
 						<p>" Etiam ante arcu, vestibulum diam. Curabitur quis lectus. Pellentesque dictum odio velit.</p>
-						<a href="about.html">Read more</a>
+						<a href="about.html">点击阅读</a>
 					</div>
 					<div class="info-pic">
 						<img src="/public/frontend/banner/images/ps.png" class="img-responsive" alt=""/>
@@ -165,8 +165,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="col-md-4 content-right">
 			<!-- Nav tabs -->
 			<ul class="nav nav-tabs nav2" role="tablist">
-				<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Trending</a></li>
-				<li role="presentation" ><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Recent Posts</a></li>
+				<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">最近发表</a></li>
+				<li role="presentation" ><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">最近拍摄</a></li>
 			</ul>
 			<!-- Tab panes -->
 			<div class="tab-content">
@@ -237,7 +237,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 			<!---->
 			<div class="category blog-ctgry">
-				<h4>Top Games</h4>
+				<h4>文章列表</h4>
 				<div class="list-group">
 					<a href="#" class="list-group-item">Cras justo odio</a>
 					<a href="#" class="list-group-item">Dapibus ac facilisis in</a>
@@ -250,7 +250,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 			</div>
 			<div class="photo-gallery">
-				<h4>Photo Gallery</h4>
+				<h4>照片墙</h4>
 				<div class="gallery-1">
 					<div class="col-md-4 gallery-grid-pic">
 						<a class="example-image-link" href="/public/frontend/banner/images/p2.jpg" data-lightbox="example-set"><img class="example-image" src="/public/frontend/banner/images/p2.jpg" alt=""/></a>
