@@ -6,6 +6,7 @@ use Phalcon\Mvc\Controller;
 class CommonController extends Controller{
 
     public $isLogin = 0;
+
     public $userInfo = [];
     /**
      * 检测用户是否登录
