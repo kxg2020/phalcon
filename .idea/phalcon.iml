@@ -7,10 +7,10 @@
     <orderEntry type="module-library">
       <library name="PHP">
         <CLASSES>
-          <root url="file://D:/Evoriment/phpstudy/phalcon/phalcon-devtools/ide/stubs/Phalcon" />
+          <root url="file://D:/phalcon-devtools/ide/stubs/Phalcon" />
         </CLASSES>
         <SOURCES>
-          <root url="file://D:/Evoriment/phpstudy/phalcon/phalcon-devtools/ide/stubs/Phalcon" />
+          <root url="file://D:/phalcon-devtools/ide/stubs/Phalcon" />
         </SOURCES>
       </library>
     </orderEntry>
