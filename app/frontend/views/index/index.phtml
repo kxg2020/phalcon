@@ -9,14 +9,15 @@
 {% block main %}
 <!-- header -->
 <div class="banner">
-
 		<ul class="cb-slideshow">
-			<li><span>Image 01</span><div><h3>你</h3></div></li>
-			<li><span>Image 02</span><div><h3>是</h3></div></li>
-			<li><span>Image 03</span><div><h3>我</h3></div></li>
-			<li><span>Image 04</span><div><h3>的</h3></div></li>
-			<li><span>Image 05</span><div><h3>眼</h3></div></li>
-			<li><span>Image 06</span><div><h3>..</h3></div></li>
+			{% for l in list%}
+			<li ><span style='background-image: url({{l['image_url']}})'></span><div><h3>{{l['description']}}</h3></div></li>
+			<li><span style='background-image: url({{l['image_url']}})'></span><div><h3>{{l['description']}}</h3></div></li>
+			<li><span style='background-image: url({{l['image_url']}})'></span><div><h3>{{l['description']}}</h3></div></li>
+			<li><span style='background-image: url({{l['image_url']}})'></span><div><h3>{{l['description']}}</h3></div></li>
+			<li><span style='background-image: url({{l['image_url']}})'></span><div><h3>{{l['description']}}</h3></div></li>
+
+			{% endfor %}
 		</ul>
 
 </div>

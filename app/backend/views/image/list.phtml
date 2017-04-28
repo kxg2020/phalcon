@@ -23,6 +23,7 @@
                     </tr>
                     </thead>
                     <tbody id="tBody">
+                    {% if images is not empty%}
                     {% for i in images %}
                     <tr>
                         <td style="vertical-align: middle">{{i['id']}}</td>
@@ -39,6 +40,7 @@
                             <a href="#myModal" data-toggle="modal" > <button data-toggle="button" class="btn btn-sm btn-warning delete" data-id="{{i['id']}}"> 删除 </button></a></td>
                     </tr>
                     {% endfor %}
+                    {% endif %}
                     </tbody>
                 </table>
                 <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade " style="display: none;" data-id="0">

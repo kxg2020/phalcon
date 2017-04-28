@@ -27,6 +27,7 @@
                                 <th>操作</th>
                             </tr>
                             <tbody id="tBody">
+                            {% if articles is not empty %}
                             {% for a in articles%}
                             <tr>
                                 <td>{{a['id']}}</td>
@@ -42,6 +43,7 @@
                                 </td>
                             </tr>
                             {% endfor %}
+                            {% endif %}
                             </tbody>
                         </table>
                         <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade " style="display: none;" data-id="0">

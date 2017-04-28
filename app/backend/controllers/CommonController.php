@@ -29,6 +29,7 @@ class CommonController extends Controller{
                 $this->userInfo = $row;
                 $this->view->setVars(['userInfo'=>$this->userInfo]);
             }
+
         }else{
 
             //>> 获取cookie
@@ -45,6 +46,8 @@ class CommonController extends Controller{
                     $this->view->setVars(['userInfo'=>$this->userInfo]);
                 }
             }
+
         }
+
     }
 }
