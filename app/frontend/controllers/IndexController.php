@@ -9,7 +9,9 @@ class IndexController extends Controller{
      */
     public function indexAction(){
 
+        //>> ²éÑ¯bannerÍ¼
+        $bannerList = $this->mysql->getList('','*','create_time desc','','','xm_banner');
 
-        $this->view->pick('index/index');
+        $this->view->pick('index/index')->setVars(['list'=>$bannerList['allrow']]);
     }
 }

@@ -28,10 +28,14 @@ class ImageController extends Controller{
 
         $imageList = $imageModel->imageList();
 
-        foreach($imageList as $key => &$value){
-            $value['date'] = date('Y-m-d',$value['create_time']);
+        if(!empty($imageList)){
+
+            foreach($imageList as $key => &$value){
+                $value['date'] = date('Y-m-d',$value['create_time']);
+            }
+            unset($value);
+
         }
-        unset($value);
 
         $count = count($imageList);
 
