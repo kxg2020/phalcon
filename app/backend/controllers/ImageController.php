@@ -72,7 +72,8 @@ class ImageController extends Controller{
                 'type'=>1,
                 'create_time'=>time(),
                 'is_active'=>1,
-                'sort'=>1
+                'sort'=>1,
+                'is_banner'=>0,
             ];
 
             $result = $this->mysql->insertData($insertData,'xm_image');
@@ -105,7 +106,7 @@ class ImageController extends Controller{
     }
 
     /**
-     * 修改状态
+     * 修改图片显示状态
      */
     public function changeAction(){
 
@@ -134,6 +135,40 @@ class ImageController extends Controller{
         }else{
 
             die($this->common->_printError('10002'));
+        }
+    }
+
+    /**
+     * 修改图片轮播状态
+     */
+    public function statusAction(){
+
+        $paramArr = $_REQUEST;
+
+        if(!empty($paramArr)){
+
+            if(isset($paramArr['id']) && is_numeric($paramArr['id']) && !empty($paramArr['id'])){
+
+                //>> 修改图片状态
+                $updateData = [
+                    'is_banner'=> 1 ^ $paramArr['status'],
+                ];
+                $res = $this->mysql->updateData(['id'=>$paramArr['id']],$updateData,'xm_image');
+                if($res === false){
+
+                    die($this->common->_printError('10010'));
+                }
+
+                die($this->common->_printSuccess());
+
+            }else{
+
+                die($this->common->_printError('10008'));
+            }
+
+        }else{
+
+            die($this->common->printError('10009'));
         }
     }
 

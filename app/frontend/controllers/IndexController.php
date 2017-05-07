@@ -10,7 +10,8 @@ class IndexController extends Controller{
     public function indexAction(){
 
         //>> ²éÑ¯bannerÍ¼
-        $bannerList = $this->mysql->getList('','*','create_time desc','','','xm_banner');
+        $where = ['is_banner'=>1];
+        $bannerList  = $this->mysql->getList($where,'image_url',' create_time desc,sort asc','','','xm_image');
 
         $this->view->pick('index/index')->setVars(['list'=>$bannerList['allrow']]);
     }
