@@ -4,7 +4,7 @@ use Phalcon\Mvc\User\Component as Component;
 class LibUtil extends Component
 {
 
-    public function checkUname($uname)
+    public function checkUserName($uname)
     {
         if( !$this->validateGeneralString($uname)){
             die($this->common->_printError('10010'));

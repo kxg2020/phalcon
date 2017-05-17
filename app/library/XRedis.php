@@ -16,11 +16,11 @@ class Redis
     public static function getInstance($config)
     {
         $name = $config['name'];
-        
+
         if (empty(self::$instances[$name])) {
             $redis = new \RedisCluster(NULL, $config['nodes']);
 
-            //如果指定了库，则默认选中指定的库            
+            //如果指定了库，则默认选中指定的库
             self::$instances[$name] = $redis;
             self::$configs[$name] = $config;
         }
@@ -39,13 +39,13 @@ class Redis
         }
 
         if (empty($names)) {
-            foreach (self::$instances as $name => $redis) {               
+            foreach (self::$instances as $name => $redis) {
                 $redis->close();
                 unset(self::$configs[$name]);
             }
         } else {
             foreach ($names as $name) {
-                if (isset(self::$instances[$name])) {                    
+                if (isset(self::$instances[$name])) {
                     self::$instances[$name]->close();
                     unset(self::$configs[$name]);
                 }

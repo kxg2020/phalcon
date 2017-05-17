@@ -11,6 +11,9 @@
     <file url="file://$PROJECT_DIR$/app/backend/views/image/add.phtml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/config/config.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/config/services.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/frontend/controllers/IndexController.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/images/xuanmaomao/status/0.gif" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/images/xuanmaomao/status/1.gif" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/public/js/xuanmaomao/article-pagination.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/public/js/xuanmaomao/article-to-php.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/public/js/xuanmaomao/login.js" charset="UTF-8" />

@@ -1,7 +1,7 @@
 <?php
 include_once __DIR__."/XMemCache.php";
-class WechatClass
-{
+
+class WeChat{
 
     const MSGTYPE_TEXT = 'text';
     const MSGTYPE_IMAGE = 'image';

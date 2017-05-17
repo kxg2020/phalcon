@@ -29,5 +29,29 @@ return new \Phalcon\Config([
         // of the webpspace.  This will break if the public/index.php entry point is moved or
         // possibly if the web server rewrite rules are changed. This can also be set to a static path.
         'baseUri'        => preg_replace('/public([\/\\\\])index.php$/', '', $_SERVER["PHP_SELF"]),
-    ]
+    ],
+
+    'redis'=>[
+        'host'=>'127.0.0.1',
+        'port'=>'6379',
+    ],
+
+    'upload'=>[
+
+        'uploads'=>[
+            'maxSize'       =>  1024*1024*5, //上传的文件大小限制 (0-不做限制)
+            'exts'          =>  array('jpg', 'png', 'gif', 'jpeg'),
+            'rootPath'      =>  './uploads/', //保存根路径]
+        ],
+
+        'Qiniu'=>[
+            'FILE_UPLOAD_TYPE'=>'Qiniu',
+            'secretKey'      => '-ozcCzNuPfZQePdMUtEHzp6gfuQQfS-GR4IOmxen', //七牛密码
+            'accessKey'      => 'Oxorx2oRMYXe8bZCRvuoNpyOexkJAgKPgs14Gv4O', //七牛用户
+            'domain'         => 'on58ea572.bkt.clouddn.com', //域名
+            'bucket'         => 'macarin', //空间名称
+            'timeout'        => 300, //超时时间
+        ],
+        ]
+
 ]);

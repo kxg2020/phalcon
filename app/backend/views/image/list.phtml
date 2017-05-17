@@ -19,6 +19,7 @@
                         <th>创建时间</th>
                         <th class="hidden-xs">排序</th>
                         <th class="hidden-xs">显示</th>
+                        <th class="hidden-xs">轮播</th>
                         <th class="hidden-xs">操作</th>
                     </tr>
                     </thead>
@@ -36,6 +37,7 @@
 "> </td>
                         <td style="vertical-align: middle" >{% if i['is_active'] == 1 %} <li class="icon-ok change" style="cursor: pointer" data-id="{{i['id']}}" ></li>
 {% else %}<li class="icon-remove change" style="cursor: pointer" data-id="{{i['id']}}"></li>{% endif %}</td>
+                        <td style="vertical-align: middle"><img style="height: 30px;width: 30px" src="/public/images/xuanmaomao/status/{{i['is_banner']}}.gif"></td>
                         <td class="hidden-xs" style="vertical-align: middle"><button class="btn btn-sm btn-primary"> 编辑 </button>&nbsp;
                             <a href="#myModal" data-toggle="modal" > <button data-toggle="button" class="btn btn-sm btn-warning delete" data-id="{{i['id']}}"> 删除 </button></a></td>
                     </tr>

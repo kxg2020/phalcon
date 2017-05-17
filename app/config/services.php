@@ -9,6 +9,9 @@ use Phalcon\Session\Adapter\Files as SessionAdapter;
 use Phalcon\Flash\Direct as Flash;
 use Phalcon\Mvc\Model\Transaction\Manager as TransactionManager;
 use Phalcon\Db\Adapter\Pdo\Mysql as PdoMysql;
+use Phalcon\Events\Manager as EventManager;
+
+
 /**
  * Shared configuration service
  */
@@ -62,18 +65,19 @@ $di->setShared('view', function () {
  * Database connection is created based in the parameters defined in the configuration file
  */
 $di->setShared('db', function () {
-    $config = $this->getConfig();
 
-    $class = 'Phalcon\Db\Adapter\Pdo\\' . $config->database->adapter;
+    $config = $this->getConfig()->database;
+
+    $class = 'Phalcon\Db\Adapter\Pdo\\' . $config->adapter;
     $params = [
-        'host'     => $config->database->host,
-        'username' => $config->database->username,
-        'password' => $config->database->password,
-        'dbname'   => $config->database->dbname,
-        'charset'  => $config->database->charset
+        'host'     => $config->host,
+        'username' => $config->username,
+        'password' => $config->password,
+        'dbname'   => $config->dbname,
+        'charset'  => $config->charset
     ];
 
-    if ($config->database->adapter == 'Postgresql') {
+    if ($config->adapter == 'Postgresql') {
         unset($params['charset']);
     }
 
@@ -87,6 +91,7 @@ $di->setShared('db', function () {
  * If the configuration specify the use of metadata adapter use it or use memory otherwise
  */
 $di->setShared('modelsMetadata', function () {
+
     return new MetaDataAdapter();
 });
 
@@ -106,34 +111,45 @@ $di->set('flash', function () {
  * Start the session the first time some component request the session service
  */
 $di->setShared('session', function () {
+
     $session = new SessionAdapter();
+
     $session->start();
+
     return $session;
 });
 
 
 //>> 操作数据库类
-$di->set('mysql', function (){
+$di->setShared('mysql', function (){
     $config = $this->getConfig();
-    return MysqlDatabase::getIns('database',$config);
-},true);
 
-$di->set('upload', function (){
-    $_config = [
-    'maxSize'       =>  1024*1024*5, //上传的文件大小限制 (0-不做限制)
-    'exts'          =>  array('jpg', 'png', 'gif', 'jpeg'),
-    'rootPath'      =>  './uploads/', //保存根路径
-    ];
-    $config = [
-    'FILE_UPLOAD_TYPE'=>'Qiniu',
-    'secretKey'      => '-ozcCzNuPfZQePdMUtEHzp6gfuQQfS-GR4IOmxen', //七牛密码
-    'accessKey'      => 'Oxorx2oRMYXe8bZCRvuoNpyOexkJAgKPgs14Gv4O', //七牛用户
-    'domain'         => 'on58ea572.bkt.clouddn.com', //域名
-    'bucket'         => 'macarin', //空间名称
-    'timeout'        => 300, //超时时间
-    ];
-    return new Uploads($_config,'',$config);
-},true);
+    return MysqlDatabase::getIns('database',$config);
+});
+
+$di->setShared('upload', function (){
+    $config = $this->getConfig->upload;
+
+    return new Uploads($config['upload'],'',$config['Qiniu']);
+});
+
+//>> 工具类
+$di->set('utils',function (){
+
+    return new LibUtil();
+});
+
+//>>Redis缓存
+$di->setShared('redis',function (){
+
+    $config = $this->getConfig()->redis;
+
+    $redis = new Redis();
+
+    $redis->connect($config['host'],$config['port']);
+
+    return $redis;
+});
 
 //>>事务
 $di->setShared( "transactions",function () {
@@ -150,13 +166,47 @@ $di->setShared('common', function (){
     return new Common();
 });
 
-//>> 注册EXCEL组件 Register a PHPExcel component
+//>> 注册EXCEL组件
 $di->set('phpexcel', function(){
     return new PHPExcelTreat();
 });
 
 $di->setShared('aes256',function(){
     return new AES256();
+});
+/**
+ * 未找到控制器和方法
+ */
+$di->setShared('dispatcher', function() {
+    //事件管理类
+    $eventsManager = new EventManager();
+    //监听一个事件
+    $eventsManager->attach("dispatch", function ($event, $dispatcher, $exception) {
+        //如果控制器存在，但方法不存在,就跳转到指定的控制器和方法
+        if ($event->getType() == 'beforeNotFoundAction') {
+            $dispatcher->forward(array(
+                'controller' => 'index',
+                'action' => 'show404'
+            ));
+            return false;
+        }
+        //如果控制器和方法都不存在,跳转到指定的控制器和方法
+        if ($event->getType() == 'beforeException') {
+            switch ($exception->getCode()) {
+                case Phalcon\Dispatcher::EXCEPTION_HANDLER_NOT_FOUND:
+                case Phalcon\Dispatcher::EXCEPTION_ACTION_NOT_FOUND:
+                    $dispatcher->forward(array(
+                        'controller' => 'index',
+                        'action' => 'show404'
+                    ));
+                    return false;
+            }
+        }
+    });
+    $dispatcher = new Phalcon\Mvc\Dispatcher();
+    //绑定事件管理器到调度器上
+    $dispatcher->setEventsManager($eventsManager);
+    return $dispatcher;
 });
 
 

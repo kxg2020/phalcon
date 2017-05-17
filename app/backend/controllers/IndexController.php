@@ -30,14 +30,14 @@ class IndexController extends CommonController{
     public function indexAction(){
 
         //>> 判断是否登录
-        if($this->isLogin == 0){
-
-          return  $this->dispatcher->forward([
-                'controller'=>'Index',
-                'action'=>'login',
-            ]);
-
-        }
+//        if($this->isLogin == 0){
+//
+//          return  $this->dispatcher->forward([
+//                'controller'=>'Index',
+//                'action'=>'login',
+//            ]);
+//
+//        }
         $this->view->pick('index/index');
 
     }

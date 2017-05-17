@@ -72,7 +72,8 @@ class ImageController extends Controller{
                 'type'=>1,
                 'create_time'=>time(),
                 'is_active'=>1,
-                'sort'=>1
+                'sort'=>1,
+                'is_banner'=>0
             ];
 
             $result = $this->mysql->insertData($insertData,'xm_image');

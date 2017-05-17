@@ -10,6 +10,7 @@ class ImportantCommon extends Component
     public function generateSalt()
     {
         $str = md5('Change Myself!'.microtime());
+
         return $str;
     }
 
