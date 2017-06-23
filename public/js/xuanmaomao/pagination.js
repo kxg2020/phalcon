@@ -30,6 +30,7 @@ $(function(){
                     '<td class="hidden-xs" style="vertical-align: middle">'+ '<input type="text" value="'+ v.sort+'" class="form-control parsley-validated" name="sort"'+ 'style="width: 30px;"> </td>'+
                     '<td style="vertical-align: middle" >'+ '<li class="'+ v.icon+' change" style="cursor: pointer" data-id="'+ v.id+'" ></li>' +
                         '</td>'+
+                                            "<td style='vertical-align: middle'>"+'<img src="/public/backend/images/'+ v.is_banner+'.png" data-id="'+ v.id+'"  data-status="'+ v.is_banner+'" style="height: 20px;width: 20px;cursor: pointer"'+ 'class="is_banner"></td>'+
                 '<td class="hidden-xs" style="vertical-align: middle"><button class="btn btn-sm btn-primary" data-id="'+ v.id+'"> 编辑 </button>&nbsp;'+
                 '<a href="#myModal" data-toggle="modal" > <button data-toggle="button" class="btn btn-sm btn-warning delete" data-id="'+ v.id+'"> 删除'+ '</button></a></td></tr>'
                                         );
@@ -114,4 +115,29 @@ $(function(){
             }
         });
     });
+
+    //>> 点击图片改变轮播图状态
+   $('body').on('click','.is_banner',function(){
+       //>> 获取当前图片的状态
+       status = $(this).attr('data-status');
+       //>> 获取图片的id
+       id = $(this).attr('data-id');
+       //>> 请求数据
+       $.ajax({
+           'type':'post',
+           'dataType':'json',
+           'url':location.protocol+'//'+window.location.host+'/backend/Image/status',
+           'data':{'id':id,'status':status},
+           success:function(e){
+               if(e.status == 1){
+
+                   layer.msg('(*^__^*),你很棒棒哦');
+               }else{
+
+                   layer.msg('（＋﹏＋）,伦家做不到');
+               }
+           }
+       });
+
+   });
 });

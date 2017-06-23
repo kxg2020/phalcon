@@ -36,6 +36,7 @@
     width: 30px;
 "> </td>
                         <td style="vertical-align: middle" >{% if i['is_active'] == 1 %} <li class="icon-ok change" style="cursor: pointer" data-id="{{i['id']}}" ></li>
+                        <td style="vertical-align: middle"><img src="/public/backend/images/{{i['is_banner']}}.png" data-status="{{i['is_banner']}}" data-id="{{i['id']}}" style="height: 20px;width: 20px;cursor: pointer" class="is_banner"></td>
 {% else %}<li class="icon-remove change" style="cursor: pointer" data-id="{{i['id']}}"></li>{% endif %}</td>
                         <td style="vertical-align: middle"><img style="height: 30px;width: 30px" src="/public/images/xuanmaomao/status/{{i['is_banner']}}.gif"></td>
                         <td class="hidden-xs" style="vertical-align: middle"><button class="btn btn-sm btn-primary"> 编辑 </button>&nbsp;

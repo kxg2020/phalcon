@@ -4,7 +4,11 @@
  */
 
 CKEDITOR.editorConfig = function( config ) {
+<<<<<<< HEAD
 	config.width = 1560; //宽度
+=======
+	config.width = 1050; //宽度
+>>>>>>> f4202f526fd8fb5d158ff01e530565fdd3800578
 	config.height = 500; //高度
 	// Define changes to default configuration here.
 	// For complete reference see:
