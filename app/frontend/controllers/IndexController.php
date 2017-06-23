@@ -10,6 +10,7 @@ class IndexController extends Controller{
     public function indexAction(){
 
 
+
         //>> 查询banner图
         $bannerList = $this->mysql->getList(['is_active'=>1],'*','create_time desc','','','xm_image');
 
@@ -20,10 +21,8 @@ class IndexController extends Controller{
     public function exampleAction(){
 
 
-        $str = $this->redis->get('name');
-        $str = json_decode($str);
 
-       var_dump($str);
+
 
     }
 
